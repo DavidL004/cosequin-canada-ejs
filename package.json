@@ -1,0 +1,14 @@
+{
+  "name": "cosequin_canada",
+  "version": "1.0.0",
+  "description": "This is just to run ejs templates on my Cosequin Canada stack",
+  "main": "app.js",
+  "scripts": {
+    "index": "npx ejs index.ejs -o ../build/index.html -f ./data/index.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8"
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "header": {
+        "title": "Cosequin Canada | Home Page"
+    },
+    "landing": {
+        "header": "<span class=\"regulatory\">cosequin</span> Dog Products",
+        "image": "cosequin_product_array_dogs.png"
+    },
+    "AWSurl": "../../public",
+    "ImageAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/img/"
+}

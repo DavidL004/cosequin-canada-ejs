@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= header.title %> </title>
+    <link rel="stylesheet" href=<%=`${AWSurl}/style/header-style.css`%>>
+    <link rel="stylesheet" href=<%=`${AWSurl}/style/style.css`%>>
+    <link rel="stylesheet" href=<%=`${AWSurl}/style/cosequin_ca_variables.css`%>>
+
+    <!-- css fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+
+
+    <!-- css fonts end -->
+</head>
+<body>
+    <header>
+        <a href="/"> <img src='https://s3.amazonaws.com/static.cosequin.com/ca/img/logo-cosequin.svg' alt="Cosequin Joint Health Supplement"> </a>
+        <button id='menuButton'>
+            <img src='https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_fonts_menu.svg'>
+            <p> Menu </p>
+        </button>
+    </header>
+    <nav id="menu" class="hidden">
+        <div class="expandable">
+            <div>
+                <div>
+                    <a href="/products/dog_product_page">
+                        Dog Products
+                    </a>
+                </div>
+                <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="">
+            </div>
+            
+            <div class="hidden">
+                <a href="/products/dog_chews">
+                    <span class="regulatory">COSEQUIN</span> Maximum Strength with MSM Plus Omega-3's
+                </a>
+                <a href="/products/dog_chewable_tablets">
+                    <span class="regulatory">COSEQUIN</span> Maximum Strength with MSM
+                </a>
+            </div>
+        </div>
+        <div class="expandable">
+            <div>
+                <div>
+                    <a href="/products/cat_product_page">
+                        Cat Products
+                    </a>
+                </div>
+                
+
+                <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="">
+            </div>
+            <div class="hidden">
+                <a href="/products/cat_max_strength_capsules">
+                    <span class="regulatory">COSEQUIN</span> For Cats Maximum Strength Capsules
+                </a>
+                <a href="/products/cat_capsules">
+                    <span class="regulatory">COSEQUIN</span> For Cats Capsules
+                </a>
+            </div>
+        </div>
+    </nav>

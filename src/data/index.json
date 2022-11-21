@@ -1,0 +1,11 @@
+{
+    "header": {
+        "title": "Cosequin Canada | Home Page"
+    },
+    "landingHeader": "Testing",
+    "landing": {
+        "header": "Explore <span class=\"regulatory\">cosequin</span> Joint Health Supplements",
+        "image": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_canada_product_display.png"
+    },
+    "AWSurl": "../../public"
+}

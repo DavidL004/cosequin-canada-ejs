@@ -1,0 +1,364 @@
+body {
+    height: 100vh;
+    margin: 0;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: var(--raleway);
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    text-align: center;
+    margin: 1em .25em;
+
+}
+
+h1 {
+    color: #0079c0;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+img {
+    max-width: 100%;
+}
+
+img.icons {
+    margin: 1em 0;
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+img.icons.large {
+    width: var(--large-icon-size);
+    height: var(--large-icon-size);
+}
+
+img.icons.small, .open_close_icon {
+    width: var(--small-icon-size);
+    height: var(--small-icon-size);
+}
+
+p {
+    margin: 0;
+    text-align: center;
+    font-family: var(--raleway);
+    font-size: 16px;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+li {
+    padding: .25em;
+}
+
+/* shopping links */
+li.shopping-links {
+    width: 80%;
+}
+
+li.shopping-links button {
+    width: 100%;
+    background-color: var(--cosequin-blue);
+    border-radius: 5px;
+    border: none;
+    padding: .5em;
+}
+
+li.shopping-links a {
+    color: white;
+    text-decoration: none;
+}
+/* end shopping links */
+
+/* landing section */
+.landing-section {
+    background-image: url('https://s3.amazonaws.com/static.cosequin.com/ca/img/product-table-full-width.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-bottom: 1.5em;
+
+    /* height: var(--after-header-height); */
+}
+
+.landing-section img {
+    max-width: 90%;
+}
+/* end landing section */
+
+/* open why cosequin section*/
+    .why-cosequin div {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 60%;
+    }
+/* close why cosequin section */
+
+/* custom horizontal rule */
+    .custom-horizontal-rule {
+        display: flex;
+        flex-direction: row ;
+        align-items: center;
+
+        width: 80%;
+        margin: .5em auto;
+        margin-bottom: 0;
+    }
+
+    .custom-horizontal-rule hr {
+        flex-grow: 1;
+    }
+
+    .custom-horizontal-rule img {
+        flex-grow: 0;
+        margin: 0 1em
+    }
+/* close custom horizontal rule */
+
+/* This will be for the expandable items */
+.expandable.question_answer {
+    width: 90%;
+
+    margin: .5em 0;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.expandable.question_answer div:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+    background-color: var(--cosequin-blue);
+    padding: .75em .25em;
+    border-radius: 5px;
+}
+
+.expandable.question_answer div:first-child h3 {
+    padding-left: .5em;
+    margin: 0;
+    text-align: left;
+    font-size: .9em;
+}
+
+.expandable.question_answer > *:last-child {
+    border-radius: 5px;
+    padding: .5em .25em;
+    width: 99%;
+    margin: 0;
+    background-color: var(--light-grey);
+}
+
+/* this will be for qa */
+
+/* qa end */
+
+/* this will be for product details */
+
+/* end product-details */
+
+/* this will be for the footer */
+
+/* general div formatting */
+footer > div:first-child {
+    background-color: var(--cosequin-blue);
+
+    padding: .5em;
+    padding-bottom: 4em;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--white);
+}
+
+/* targeted towards Contact Us */
+footer > div:first-child > p {
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    margin-right: auto;
+
+    border-left: var(--white) 2px solid;
+    padding-left: .5em;
+}
+
+footer .logo {
+    width: 65%;
+
+    padding: .5em 0;
+
+    margin: 2em 0;
+
+    border-bottom: var(--white) 1px solid;
+}
+
+.contact-footer-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-footer-div div {
+    display: flex;
+    flex-direction: row;
+    margin: .25em .5em;
+}
+
+.contact-footer-div p {
+    padding-left: .5em;
+    text-align: left;
+}
+
+/* footer > div:first-child img {
+    padding: 0 .25em;
+} */
+
+footer > div:last-child {
+    background-color: var(--footer-blue);
+
+    padding: 2em .5em;
+    color: var(--white);
+}
+
+footer > div:last-child p {
+    margin-bottom: 1em;
+}
+
+footer > div:last-child a {
+    font-family: 'Source Sans Pro', sans-serif;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: lightgray;
+
+    font-size: .5em;
+    font-weight: 400;
+}
+
+
+
+/* THIS WILL BE FOR SPECIFIC ITEM CLASS RULES */
+
+li.location {
+    list-style-image: url('https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_location.svg');
+}
+
+li.phone {
+    list-style-image: url('https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_location.svg');
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+/* Section where Cosequin products are laid on top of a background */
+.girl-and-dog {
+    background-image: url('https://s3.amazonaws.com/static.cosequin.com/ca/img/section-Steps-of-Life-Video.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    
+    height: 25em;
+
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+.girl-and-dog img {
+    position: relative;
+    bottom: -13em;
+    width: 90%;
+}
+
+/* ============================== END SECTION ============================== */
+
+/* ========================== Start Regulatory =========================== */
+.regulatory::after {
+    content: "\00AE";
+    /* vertical-align: super; */
+    font-size: 75%;
+    position: relative;
+    top: -.5em;
+    line-height: 0;
+}
+
+.regulatory {
+    text-transform: uppercase;
+}
+/* ==================================== End Regulatory  ====================================*/
+
+
+
+/* showing / hiding items */
+.hidden {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;   
+}
+
+.viewable {
+    opacity: 1;
+    position: static;
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+/* showing / hiding items close */
+
+
+/* =================================== QA Section ================================ */
+
+.float-right {
+    width: 100%;
+}
+
+.float-right > * {
+    float: right;
+    margin-right: 2em;
+}
+
+
+/* =================================== End QA Section ================================ */

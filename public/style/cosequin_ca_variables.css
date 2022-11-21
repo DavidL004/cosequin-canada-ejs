@@ -1,0 +1,23 @@
+:root {
+    /* Colors */
+    --cosequin-blue: #0072ce;
+    --footer-blue: #0065ad;
+    --arrow-red: red;
+    --white: white;
+    --light-grey: #EAEAEA;
+
+    /* spacing */
+    --header-height: 10vh;
+    --after-header-height: calc(100vh - var(--header-height));
+
+    /* fonts */
+    --raleway: 'Raleway', 'Roboto Slab', sans-serif;
+
+    /* icons */
+    --large-icon-size: 90px;
+    --small-icon-size: 25px;
+    --icon-size: 50px;
+
+
+
+}

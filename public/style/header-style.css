@@ -1,0 +1,118 @@
+/* header {
+    display: inline-block;
+} */
+
+
+/* Header css */
+header {
+    padding: .5em 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    border-bottom: 2px solid #0079C0;
+    border-top: 10px solid #0079C0;
+    height: var(--header-height);
+}
+
+header a {
+    display: flex;
+    justify-content: center;
+}
+
+header a img {
+    width: 85%;
+}
+
+header button {
+    border: none;
+    border-left: lightgrey 1px dashed;
+    padding: 0em 1em;
+    background-color: transparent;
+}
+
+header button p {
+    font-size: .75em;
+    color: darkgrey;
+    font-family: 'Source Sans Pro', 'Raleway', 'sans-serif';
+}
+
+header button img {
+    max-width: 80%;
+    min-width: 50%;
+}
+/* header css end */
+
+/* How the nav items display */
+nav {
+    /* align-items: center;
+    display: flex;
+    flex-direction: column; */
+    height: var(--after-header-height);
+}
+
+/* nav a {
+    color: #0079C0;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid darkgrey;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', 'Raleway', 'sans-serif';
+    font-weight: 700;
+} */
+/* These are the items in the dropdown menu  */
+
+
+
+#menu a {
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    display: block;
+
+}
+
+/* #menu div a:first-child {
+    text-decoration: none;
+    font-weight: 700;
+    padding-left: 1em;
+    background-color: white;
+} */
+
+#menu div a {
+    padding: .25em 0 .25em 2em;
+
+    font-weight: 400;
+}
+
+#menu .expandable > div:first-child {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#menu .expandable > div:first-child, #menu .expandable > div:last-child a {
+    border-bottom: darkslategray 1px solid;
+}
+
+#menu .expandable > div:first-child div {
+    flex-grow: 1;
+    padding: .5em;
+}
+
+#menu .expandable > div:first-child div a {
+    padding: 0;
+    display: block;
+    width: fit-content;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#menu .expandable > div:first-child img {
+    /* flex-grow: 0; */
+}
+
+#menu .expandable > div:last-child {
+    background-color: #FAFAFA;
+}

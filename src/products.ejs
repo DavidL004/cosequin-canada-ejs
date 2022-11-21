@@ -1,0 +1,35 @@
+<%- include('./partials/head'); %>
+
+<main>
+    <%- include('./partials/landing', {header: landing.header, tableImageURL: `${ImageAWSurl}${landing.image}`}); %>
+    <section>
+        <div class="filter expandable">
+            <div>
+                <p>Filter Products</p>
+                <img src="" alt="dropdown">
+            </div>
+            <div>
+                <h4>Filter By Animal</h4>
+                <form>
+                    <input type="radio" name="pets" id="dogs" value="dogs"> 
+                    <label for="dogs">DOGS</label><br>
+                    <input type="radio" name="pets" id="cats" value="cats">
+                    <label for="cats">CATS</label><br>
+        
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+ 
+</main>
+
+
+<%- include('./partials/footer'); %>
+
+<script src="<%=`${AWSurl}/scripts/script.js`%>"></script>
+    
+</body>
+</html>
