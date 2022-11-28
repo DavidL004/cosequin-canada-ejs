@@ -1,0 +1,19 @@
+{
+    "header": {
+        "title": "Dog Chews Page | Cosequin Canada"
+    },
+    "landing": {
+        "header": "<span class=\"regulatory\">cosequin</span> Maximum Strength with MSM Plus Omega-3's Soft Chews",
+        "image": "cosequin_dog_chews_display.png",
+        "isAmazonOnly": false,
+        "shopButtons": {
+            "amazon": "",
+            "costco": "",
+            "petSmart": ""
+        }
+    },
+
+    "AWSurl": "../../public",
+    "ImageAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/img/",
+    "GoogleIconsAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/"
+}

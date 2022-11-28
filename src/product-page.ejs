@@ -1,0 +1,163 @@
+<%- include('src/partials/head'); %>
+
+<main>
+    <%- include('src/partials/landing', {header: landing.header, tableImageURL: `${ImageAWSurl}${landing.image}`}); %>
+    <%- include('src/partials/horizontal-rule', {src: 'https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_paw_print.svg'}); %>
+    <section class="why-cosequin-product">
+        <img width="60px" height="60px" src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_joint.svg" alt="">
+        <h2>
+            WHY <span class="regulatory">cosequin</span> FOR DOGS?
+        </h2>
+        <p><strong><span class="regulatory">cosequin</span> is a scientifically researched, joint health supplement formulated to help support dog joint health.</strong></p>
+        <ul class="paw-list">
+            <li>#1 U.S. Veterinarian Recommended Retail Joint Health Supplement Brand (arrow)</li>
+            <li><span class="regulatory">cosequin</span> is a high-quality joint health supplement</li>
+            <li>Manufactured under very strict quality standards</li>
+            <li>Formulated for dogs of all sizes</li>
+        </ul>
+        <%- include('src/partials/shop-buttons'); %>
+    </section>
+    <%- include('src/partials/horizontal-rule', {src: 'https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_book.svg'}); %>
+    <section class="product-details">
+        <h3>
+            Product Details
+        </h3>
+        <div>
+            <div class="expandable closed">
+                <div>
+                   <h4>
+                        Product Description
+                   </h4>
+                   <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
+                </div>
+                <div>
+                    <h5>
+                        What is <span class="regulatory">Cosequin</span> Maximum Strength with MSM Plus Omega-3's Soft Chews?
+                    </h5>
+                    <p>
+                        <span class="regulatory">cosequin</span> Maximum Strength with MSM Plus Omega-3’s contains glucosamine hydrochloride, sodium chondroitin sulfate, and methylsulfonylmethane (MSM). This combination of ingredients helps support your dog’s healthy cartilage. Each soft chew also contains omega-3 fatty acids to help support skin & coat health.
+                    </p>    
+                </div>
+                
+              </div>
+              <div class="expandable closed">
+                <div>
+                  <h4>
+                    Product Facts
+                  </h4>
+                  <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
+                </div>
+                <div>
+                    <table class="active-ingredients">
+                    <caption>Active Ingredients Per Chew:</caption>
+                    <tr>
+                        <td>Glucosamine Hydrochloride (<span class="regulatory">FCHG49</span>)</td>
+                        <td>600 mg</td>
+                    </tr>
+                    <tr>
+                        <td>Methylsulfonylmethane (MSM)</td>
+                        <td>400 mg</td>
+                    </tr>
+                    <tr>
+                        <td>Sodium Chondroitin Sulfate (<span class="regulatory">TRH122</span>)</td>
+                        <td>300 mg<span class="arrow">&#9650</span></td>
+                    </tr>
+                    <tr>
+                        <td>Total Omega-3's</td>
+                        <td>70 mg</td>
+                    </tr>
+                    <tr>
+                        <td>EPA</td>
+                        <td>35 mg</td>
+                    </tr>
+                    <tr>
+                        <td>DHA</td>
+                        <td>20 mg</td>
+                    </tr>
+                    </table>
+                    <p><span class="arrow">&#9650</span>Contains up to 10% moisture</p>
+                </div>
+              </div>
+              <div class="expandable closed">
+                <div>
+                   <h4>
+                    Directions For Use
+                   </h4>
+                   <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
+                </div>
+                <div>
+                    <table class="directions">
+                        <caption>Number Of Soft Chews:</caption>
+                        <tr>
+                            <th>Weight</th>
+                            <th>Initial 4-6 Week Period</th>
+                            <th>After Initial 6 Weeks</th>
+                        </tr>
+                        <tr>
+                            <td>10-29lbs / 4.5-13.5kg</td>
+                            <td>1 daily</td>
+                            <td>1 every other day</td>
+                        </tr>
+                        <tr>
+                            <td>30-59lbs / 13.6-27kg</td>
+                            <td>2 daily</td>
+                            <td>1 daily</td>
+                        </tr>
+                        <tr>
+                            <td>60lbs and over / 27kg and over</td>
+                            <td>3 daily</td>
+                            <td>1-2 daily</td>
+                        </tr>
+                    </table>
+                </div>
+              </div>
+        </div>
+    </section>
+    <%- include('src/partials/horizontal-rule', {src: 'https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_RD.svg'}); %>
+    <section class="ingredients">
+        <h3>Active Ingredients in <span class="regulatory">Cosequin</span></h3>
+        <div>
+            <p>
+                <strong>Glucosamine Hydrochloride:</strong>
+                Key nutrient to help keep cartilage healthy and functioning properly.
+            </p>
+        </div>
+        <div>
+            <p>
+                <strong>Sodium Chondroitin Sulfate:</strong>
+                Supports healthy joint function.
+            </p>
+        </div>
+        <div>
+            <p>
+                <strong>Methylsulfonylmethane (MSM):</strong>
+                Provides sulfur, which helps support joint health in dogs.
+            </p>
+        </div>
+        <div>
+            <p>
+                <strong>Omega-3 Fatty Acids:</strong>
+                Supports skin and coat health.
+            </p>
+        </div>
+        <div class="emphasized">
+            <p>The combination of <strong>Glucosamine</strong>, <strong>Chondroitin Sulfate</strong>, and <strong>MSM</strong> helps support healthy cartilage.</p>
+        </div>
+    </section>
+
+    <%- include('src/partials/horizontal-rule', {src: 'https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_usa_retail.svg'}); %>
+
+    <section class="where-to-buy">
+        <img src="<%=`${ImageAWSurl}${landing.image}`%>" alt="">
+        <h3>Where To Buy</h3>
+        <%- include('src/partials/shop-buttons'); %> 
+    </section>
+</main>
+
+
+<%- include('src/partials/footer'); %>
+
+<script src="<%=`${AWSurl}/scripts/script.js`%>"></script>
+    
+</body>
+</html>

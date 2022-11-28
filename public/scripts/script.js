@@ -1,14 +1,14 @@
 'use strict';
 // enabling strict mode
 
-let handleMenu = (menu, body) => {
-    // console.log('called handlemenu');
+function handleMenu(menu, body) {
+    // //console.log('called handlemenu');
 
     if (menu.classList.contains('hidden')) {
-        showElement(menu);
+        menu.classList.remove('hidden');
     }
     else {
-        hideElement(menu);
+        menu.classList.add('hidden');
     }
 
     if (body.classList.contains('hide-overflow')) {
@@ -19,7 +19,7 @@ let handleMenu = (menu, body) => {
     }
 }
 
-let updateExpandAllIcon = function(button, sections) {
+function updateExpandAllIcon(button, sections) {
     let buttonIcon = button.querySelector('.open_close_icon');
 
     if (isOneSectionExpanded(sections)) {
@@ -30,14 +30,14 @@ let updateExpandAllIcon = function(button, sections) {
     }
 }
 
-let bindExpandAll = function(button, sections) {  
-    // console.log("bind expand all called") ;
+function bindExpandAll(button, sections) {  
+    // //console.log("bind expand all called") ;
     let icon = button.querySelector('.open_close_icon');
 
     button.addEventListener('click', event => {
-        // console.log('clicking on expand/collapse all')
+        // //console.log('clicking on expand/collapse all')
         if (isOneSectionExpanded(sections)) {
-            // console.log('one section is expanded');
+            // //console.log('one section is expanded');
             closeSections(false, sections);
             switchExpansionIcon(icon, false);
         }
@@ -48,17 +48,16 @@ let bindExpandAll = function(button, sections) {
     })
 }
 
-let bindExpansionListeners = function(expandableGroups, expandAllButton = null) {
-    // console.log("bind expansion listeners called");
+function bindExpansionListeners(expandableGroups, expandAllButton = null) {
+    // //console.log("bind expansion listeners called");
     if (expandableGroups[0] != undefined) {
         expandableGroups.forEach(element => {
-            // console.log(element);
-            element.firstElementChild.addEventListener('click', (event) => {
-                if (element.lastElementChild.classList.contains('hidden')) {
-                    openExpansion(element);
+            element.firstElementChild.addEventListener('click', function(event) {
+                if (element.classList.contains('closed')) {
+                    openExpandable(element);
                 }
                 else {
-                    closeExpansion(element);
+                    closeExpandable(element);
                 }
                 if (expandAllButton) {
                     updateExpandAllIcon(expandAllButton, expandableGroups)
@@ -67,11 +66,11 @@ let bindExpansionListeners = function(expandableGroups, expandAllButton = null) 
         });
     }
     else {
-        console.log("bindExpansion passed empty array");
+        //console.log("bindExpansion passed empty array");
     }
 }
 
-let isOneSectionExpanded = function(expandableGroups) {
+function isOneSectionExpanded(expandableGroups) {
     for (let expandable of expandableGroups) {
         if (expandable.lastElementChild.classList.contains('viewable')) {
             return true;
@@ -81,62 +80,80 @@ let isOneSectionExpanded = function(expandableGroups) {
     return false;
 }
 
-let closeSections = function(shouldOpenFirst, sections) {
+function closeSections(shouldOpenFirst, sections) {
     if (shouldOpenFirst) {
         sections.forEach((element, index) => {
             if (index != 0) {
-                closeExpansion(element);
+                closeExpandable(element);
             }
             else {
-                openExpansion(element);
+                openExpandable(element);
             }
         })
     }
     else {
         sections.forEach(element => {
-            closeExpansion(element);
+            closeExpandable(element);
         })
     }
 }
 
-let openSections = function(sections) {
+function openSections(sections) {
     sections.forEach(element => {
         openExpansion(element);
     });
 }
 
-let openExpansion = function(section) {
-    showElement(section.lastElementChild);
-    // console.log(section);
-    // console.log('section.querySelector(.open_close_icon) returns' + section.querySelector('.open_close_icon'));
+function showElement(element) {
+    element.classList.remove('hidden');
+    switchExpansionIcon(element.querySelector('.open_close_icon'), true);
+}
+
+function hideElement(element) {
+    element.classList.add('closed');
+    switchExpansionIcon(element.querySelector('.open_close_icon'), false);
+}
+
+function openExpandable(section) {
+    section.classList.remove('closed');
     switchExpansionIcon(section.querySelector('.open_close_icon'), true);
 }
 
-let closeExpansion = function(section) {
-    hideElement(section.lastElementChild);
+function closeExpandable(section) {
+    section.classList.add('closed');
     switchExpansionIcon(section.querySelector('.open_close_icon'), false);
 }
 
-let showElement = function(element) {
-    element.classList.add('viewable');
-    element.classList.remove('hidden');
-}
-
-let hideElement = function(element) {
-    element.classList.add('hidden');
-    element.classList.remove('viewable');
-}
-
-let switchExpansionIcon = function(icon, isExpanding) {
+function switchExpansionIcon(icon, isExpanding) {
     if (icon) {
         if (isExpanding) {
-            icon.src = "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_close.svg";
-        } else {
-            icon.src = 'https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg';
+            //console.log(icon);
+            //console.log(`Icon dataset: ${icon.dataset.imageOpen}`);
+            if (icon.dataset.imageOpen) {
+                //console.log(icon.dataset.imageOpen);
+
+                icon.src = icon.dataset.imageOpen;
+            }
+            else {
+                icon.src = "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_close.svg";
+            }
+        } 
+        else {
+            //console.log(icon);
+            //console.log(`Icon dataset: ${icon.dataset.imageOpen}`);
+            if (icon.dataset.imageClose) {
+               //console.log(icon.dataset.imageClose);
+
+               icon.src = icon.dataset.imageClose;
+            }
+            else {
+                icon.src = 'https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg';
+            }
+            
         }
     }
     else {
-        console.log('icon is undefined');
+        //console.log('icon is undefined');
     }
     
 }
@@ -147,7 +164,7 @@ let expandAllButton = document.querySelector('#expand_collapse_all');
 let expandableSections = document.querySelectorAll('.expandable');
 
 if (expandableSections.length != 0) {
-    // console.log("there are expandable sections");
+    // //console.log("there are expandable sections");
     if (expandAllButton) {
         bindExpandAll(expandAllButton, expandableSections);
         bindExpansionListeners(expandableSections, expandAllButton);
@@ -162,8 +179,3 @@ document.querySelector('#menuButton').addEventListener('click', (event) =>
         handleMenu(document.querySelector('#menu'), document.querySelector('body'))
     }
 );
-
-
-
-
-

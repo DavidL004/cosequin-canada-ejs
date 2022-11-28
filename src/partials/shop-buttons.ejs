@@ -1,3 +1,9 @@
-<li class="shopping-links"><button><a href="amazonexample">Shop Now on Amazon.ca</a></button></li>
-<li class="shopping-links"><button><a href="costcoexample">Shop Now on Costco</a></button></li>
-<li class="shopping-links"><button><a href="petsmartexample">Shop Now on Petsmart</a></button></li>
+<ul class="shopping-links">
+    <% if(landing.isAmazonOnly) { %>
+        <li><button><a href="<%= landing.shopButtons.amazon %>">Shop Now on Amazon.ca</a></button></li>
+    <% } else { %>
+        <li><button><a href="<%= landing.shopButtons.amazon %>">Shop Now on Amazon.ca</a></button></li> 
+        <li><button><a href="<%= landing.shopButtons.costco %>">Shop Now on Costco</a></button></li>
+        <li><button><a href="<%= landing.shopButtons.petSmart %>">Shop Now on Petsmart</a></button></li>    
+    <% } %>
+</ul>

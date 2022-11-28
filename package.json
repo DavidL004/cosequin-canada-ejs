@@ -4,11 +4,14 @@
   "description": "This is just to run ejs templates on my Cosequin Canada stack",
   "main": "app.js",
   "scripts": {
-    "index": "npx ejs index.ejs -o ../build/index.html -f ./data/index.json"
+    "compile": "npx ejs ./src/index.ejs -o ./build/index.html -f ./src/data/index.json; npx ejs ./src/products.ejs -o ./build/dog_products.html -f ./src/data/dog-product.json; npx ejs ./src/products.ejs -o ./build/cat_products.html -f ./src/data/cat-products.json; npx ejs ./src/product-page.ejs -o ./build/cosequin-msm-omega3.html -f ./src/data/dog-chews.json;"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8"
+  },
+  "devDependencies": {
+    "ejs-lint": "^2.0.0"
   }
 }

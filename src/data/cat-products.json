@@ -1,10 +1,10 @@
 {
     "header": {
-        "title": "Dog Product Page | Cosequin Canada"
+        "title": "Cat Product Page | Cosequin Canada"
     },
     "landing": {
-        "header": "<span class=\"regulatory\">cosequin</span> Dog Products",
-        "image": "cosequin_product_array_dogs.png",
+        "header": "<span class=\"regulatory\">cosequin</span> Cat Products",
+        "image": "cosequin_product_array_cats.png",
         "isAmazonOnly": false,
         "shopButtons": {
             "amazon": "",
@@ -12,7 +12,7 @@
             "petSmart": ""
         }
     },
-    "defaultAnimal": "dog",
+    "defaultAnimal": "cat",
     "products": [
         {
             "animalType": "dog",
@@ -63,7 +63,6 @@
             }
         }
     ],
-
 
     "AWSurl": "../../public",
     "ImageAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/img/",
