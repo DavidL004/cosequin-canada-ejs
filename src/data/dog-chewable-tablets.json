@@ -3,8 +3,8 @@
         "title": "Dog Chews Page | Cosequin Canada"
     },
     "landing": {
-        "header": "<span class=\"regulatory\">cosequin</span> Maximum Strength with MSM Plus Omega-3's Soft Chews",
-        "image": "cosequin_dog_chews_display.png",
+        "header": "<span class=\"regulatory\">Cosequin</span> Maximum Strength Plus MSM Chewable Tablets",
+        "image": "cosequin_chewable_tablet.png",
         "isAmazonOnly": false,
         "shopButtons": {
             "amazon": "",
@@ -24,8 +24,8 @@
     },
     "productDetails": {
         "productDescription": {
-            "header": "What is <span class=\"regulatory\">Cosequin</span> Maximum Strength with MSM Plus Omega-3's Soft Chews?",
-            "body": "<span class=\"regulatory\">cosequin</span> Maximum Strength with MSM Plus Omega-3’s contains glucosamine hydrochloride, sodium chondroitin sulfate, and methylsulfonylmethane (MSM). This combination of ingredients helps support your dog’s healthy cartilage. Each soft chew also contains omega-3 fatty acids to help support skin & coat health."
+            "header": "What is <span class=\"regulatory\">Cosequin</span> Maximum Strength Plus MSM Chewable Tablets?",
+            "body": "<span class=\"regulatory\">cosequin</span> Maximum Strength Plus MSM contains glucosamine hydrochloride, sodium chondroitin sulfate, and methylsulfonylmethane (MSM). This combination of ingredients helps support your dog’s healthy joints."
         },
         "productFacts": {
             "caption": "Active Ingredients Per Chew:",
@@ -35,25 +35,18 @@
                     "600 mg"
                 ],
                 [
-                    "Methylsulfonylmethane (MSM)",
-                    "400 mg"
-                ],
-                [
                     "Sodium Chondroitin Sulfate (<span class=\"regulatory\">TRH122</span>)",
                     "300 mg<span class=\"arrow\">&#9650</span>"
                 ],
                 [
-                    "Total Omega-3's",
-                    "70 mg"
+                    "Methylsulfonylmethane (MSM)",
+                    "250 mg"
                 ],
                 [
-                    "EPA",
-                    "35 mg"
-                ],
-                [
-                    "DHA",
-                    "20 mg"
+                    "Manganese (from manganese ascorbate)",
+                    "3 mg"
                 ]
+                
             ]
         },
         "directions": {
@@ -65,14 +58,19 @@
             ],
             "entries": [
                 [
-                    "10-29lbs / 4.5-13.5kg",
-                    "1 daily",
-                    "1 every other day"
+                    "15.4lbs and under / 7kg and under",
+                    "&frac12; daily",
+                    "&frac12; every other day"
                 ],
                 [
-                    "30-59lbs / 13.6-27kg",
-                    "2 daily",
-                    "1 daily"
+                    "15.4-30.9lbs / 7-14kg",
+                    "1 daily",
+                    "&frac12; daily"
+                ],
+                [
+                    "60lbs and over / 27kg and over",
+                    "3 daily",
+                    "1-2 daily"
                 ],
                 [
                     "60lbs and over / 27kg and over",
