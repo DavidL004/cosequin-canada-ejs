@@ -1,3 +1,7 @@
+html {
+    max-width: 100%;
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -6,14 +10,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    font-family: var(--raleway);
+    /* font-family: var(--raleway); */
     text-align: center;
 }
 
 h1, h2, h3 {
-    font-weight: 900;
-    margin: 1em .25em;
+    font-weight: 700;
+    margin: 5% 2.5%;
 
+    /* font-family: 'Roboto Slab', sans-serif; */
 }
 
 a {
@@ -21,11 +26,20 @@ a {
 }
 
 h1 {
-    color: #0079c0;
+    color: var(--cosequin-blue);
+    font-size: 28px;
+    font-family: 'Roboto Slab', sans-serif;
 }
 
 h2 {
-    font-size: 1.25em;
+    color: var(--cosequin-blue);
+    font-size: 24px;
+    font-family: var(--source-sans-pro);
+}
+
+h3 {
+    font-size: 20px;
+    font-family: var(--raleway);
 }
 
 img {
@@ -59,7 +73,17 @@ section {
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    /* margin: 5% 0; */
 }
+
+main section:last-child {
+    margin-bottom: 10%;
+}
+
+/* section > * {
+    margin: 0 auto;
+} */
 
 button {
     display: flex;
@@ -71,7 +95,7 @@ button {
 ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 3% 0;
     width: 100%;
 }
 
@@ -81,29 +105,34 @@ li {
 
 /* shopping links */
 ul.shopping-links {
+    /* margin: 3% 0; */
+
     list-style-type: none;
 
     display: flex;
     flex-flow: column;
     align-items: center;
-
 }
 
 .shopping-links li {
-    width: 80%;
+    /* width: 80%; */
 }
 
 .shopping-links button {
-    width: 100%;
+    /* width: 100%; */
     background-color: var(--cosequin-blue);
     border-radius: 5px;
     border: none;
-    padding: .5em;
+    padding: 15px 7px;
 }
 
 .shopping-links a {
     color: white;
     text-decoration: none;
+
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 /* end shopping links */
 
@@ -114,13 +143,20 @@ ul.shopping-links {
     background-repeat: no-repeat;
     background-size: cover;
 
-    padding-bottom: 1.5em;
+    padding-bottom: 5%;
+
+    margin-top: 0;
 
     /* height: var(--after-header-height); */
 }
 
-.landing-section img {
+.landing-section img, .where-to-buy img {
     max-width: 90%;
+    max-height: 40vh;
+}
+
+.landing-section ul {
+    padding-top: 0%;
 }
 /* end landing section */
 
@@ -129,47 +165,60 @@ ul.shopping-links {
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 60%;
+
+    width: 50%;
 }
 /* close why cosequin section */
 
 /* Why cosequin on the producct page */
 .why-cosequin-product {
     /* width: 100%; */
-    background-color: var(--light-grey);
-    padding: .5em;
-    margin-top: .5em;
-
-    
+    background-color: #F2F7FA;
+    padding: 2.5%;
+    margin-top: 2.5%;    
 }
 
-.why-cosequin-product h2, .why-cosequin-product p {
-    color: var(--cosequin-blue);
-    margin: .25em 0;
+.why-cosequin-product h2 {
+    font-weight: 400;
+    font-size: 30px;
 }
 
 .why-cosequin-product strong {
-    font-size: 1.1em;
-    font-weight: 900;
+    font-weight: 700;
+    font-size: 20px;
 }
 
-.why-cosequin-product .paw-list {
-    list-style-image: url(https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_paw_print_solid.svg);
-    display: block;
-
-    width: 80%;
-    margin-bottom: 1em;
+.why-cosequin-product h2, .why-cosequin-product p, .why-cosequin-product li {
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-.why-cosequin-product .paw-list li {
-    font-family: var(--raleway);
-    color: #333333;
-    font-size: .9em;
+.why-cosequin-product h2, .why-cosequin-product > p {
+    color: var(--cosequin-blue);
+    margin: 1% 0;
+    line-height: 35px;
 }
 
-.why-cosequin-product .paw-list li::marker {
-    font-size: 2em;
+.custom-bullet-list {
+    width: 100%;
+
+    margin: 1.5% 3%;
+
+    display: flex;
+    align-items: center;
 }
+
+.custom-bullet-list p {
+    text-align: left;
+}
+
+.custom-bullet-list img {
+    margin-left: 1%;
+    margin-right: 2%;
+    max-width: 24px;
+    max-height: 24px;
+}
+
+
 
 /* close why cosequin on the product page */
 
@@ -179,9 +228,8 @@ ul.shopping-links {
     flex-direction: row ;
     align-items: center;
 
-    width: 100%;
-    margin: .5em auto;
-    margin-bottom: 0;
+    width: 80%;
+    margin: 5% auto;
 }
 
 .custom-horizontal-rule hr {
@@ -192,7 +240,7 @@ ul.shopping-links {
 
 .custom-horizontal-rule img {
     flex-grow: 0;
-    margin: 0 1em
+    margin: 0 10%;
 }
 /* close custom horizontal rule */
 
@@ -200,7 +248,7 @@ ul.shopping-links {
 .expandable {
     width: 90%;
 
-    margin: .5em 0;
+    margin: 1% 0;
 
     display: flex;
     flex-flow: column;
@@ -211,8 +259,8 @@ ul.shopping-links {
     box-sizing: border-box;
 }
 
-.expandable div:first-child {
-    width: 100%;
+.expandable > div:first-child {
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -220,89 +268,133 @@ ul.shopping-links {
     justify-content: space-between;
 }
 
-.expandable div:first-child img {
+/* .expandable > div:first-child img {
     margin-right: 1em;
+} */
+
+
+/* ========================== Question Answer Open ==========================*/
+
+
+.faq-section {
+    margin-top: 0;
 }
 
+.faq-section h2 {
+    margin-top: 2%;
+}
+
+.faq-section button {
+    border: none;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.faq-section > div {
+    margin: 2.5% 0;
+    width: 90%;
+}
 
 /* probably comment this out */
-.faq-section .expandable > *:last-child {
+.faq-section .expandable > p {
     border-radius: 0 0 5px 5px;
     padding: .5em .25em;
-    max-width: 99%;
     margin: 0;
     background-color: var(--light-grey);
 }
 
-/* ========================== Question Answer Open ==========================*/
 .faq-section .expandable div:first-child h3 {
-    padding-left: .5em;
     margin: 0;
     text-align: left;
-    font-size: .9em;
 }
 
 .faq-section .expandable div:first-child {
     color: white;
     background-color: var(--cosequin-blue);
-    padding: .75em .25em;
+    padding: 2.5% 5%;
     border-radius: 5px 5px 0px 0px;
+    width: 100%;
 }
+
+.faq-section .expandable.closed div:first-child {
+    border-radius: 5px;
+}
+
 
 /* ========================== Question Answer Close ==========================*/
 
 /* ====================  Filter Section ====================*/
 
 .filter {
-    background-color: white;
-    margin: 1em 0;
     width: 80%;
     border: 1px solid var(--cosequin-blue);
-    /* border-radius: 10px; */
 }
 
 .filter.closed {
     border-color: darkgray;
 }
 
-.filter div:first-child {
-    background-color: white;
-    border-radius: 0;
-    padding: .5em 0;
-    border-bottom: 1px solid var(--cosequin-blue);
+.filter > div:first-child {
+    
+    width: 100%;
+
+    padding: 2% 5%;
+
+    border-bottom: var(--cosequin-blue) 1px solid;
 }
 
-.filter div:first-child p {
+.filter > div:first-child p {
     color: darkgrey;
     text-align: left;
     flex-grow: 1;
-    margin-left: 1em;
 }
 
-.filter.closed div:first-child {
+.filter.closed > div:first-child {
     border: none;
+
 }
 
-.filter div:last-child {
-    background-color: white;
+.filter > div:last-child {
+    /* background-color: white; */
 
-    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+
+    width: 85%;
     display: flex;
     flex-flow: column;
     /* border-radius: 10px; */
 }
 
-.filter div:last-child h4 {
+.filter > div:last-child h4 {
     color: var(--cosequin-blue);
     border-left: 3px solid var(--cosequin-blue);
     padding-left: 1em;
 
+
     text-align: left;
+
+    font-size: 16px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
 
 }
 
-.filter div:last-child form {
+.filter form {
     margin: 1em 0;
+}
+
+.filter input {
+    margin: 0;
+}
+
+.filter label {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+input[type="radio"]:checked ~ label {
+    font-weight: 700;
 }
 
 /* ====================  End Filter Section ====================*/
@@ -310,31 +402,68 @@ ul.shopping-links {
 /*====================  Open Product Section ====================*/
 
 .product {
-    margin: 1em 0;
+    margin: 7.5% 0;
 
     display: flex;
     flex-flow: column;
     align-items: center;
 
     width: 60%;
+
     box-sizing: border-box;
 }
 
 .product > img {
-    width: 75%;
+    width: 60%;
 }
+
+.product p, .product h4, .product a {
+    font-family: 'Roboto', sans-serif;
+}
+
+.product > h4, .product > p {
+    font-size: 16px;
+
+    margin-bottom: 1%;
+}
+
+.product > p {
+    font-weight: 300;
+
+    margin-top: 5%;
+}
+
+.product > h4 {
+    font-weight: 400;
+}
+
+.product > a {
+    font-size: 14px;
+    color: #606060;
+}
+
+
+/* ============ Product Drop Down ============ */
 
 .product .expandable {
-    /* padding: 0; */
     /* border: var(--cosequin-blue) 1px solid; */
     border-radius: 10px;
+    box-sizing: border-box;
+
+    width: 80%;
 }
 
-.product .expandable div:first-child {
+.product .expandable > div:first-child {
     border-radius: 10px 10px 0 0;
-    padding: .5em;
+    padding: 5%;
+    width: 100%;
 
-    max-width: 100%;
+    background-color: var(--cosequin-blue);
+}
+
+.product .expandable > div:first-child p {
+    color: white;
+    font-size: 16px;
 }
 
 .product .expandable.closed div:first-child {
@@ -342,17 +471,19 @@ ul.shopping-links {
 }
 
 .product .expandable div:last-child {
-    padding: 0;
     width: 100%;
-    background-color: transparent;
 
-    border: var(--cosequin-blue) 1px solid;
+    border: var(--cosequin-blue) 2px solid;
+    border-radius: 0 0 10px 10px;
     border-top: none;
+}
 
+.product .expandable ul {
+    margin: 0;
 }
 
 .product .expandable div:last-child li:not(:last-child) {
-    border-bottom: var(--cosequin-blue) 1px solid;
+    border-bottom: var(--cosequin-blue) 2px solid;
 }
 
 .product .expandable div:last-child li {
@@ -362,35 +493,38 @@ ul.shopping-links {
 
 .product .expandable div:last-child a {
     display: block;
-    font-size: 20px;
+    font-size: 16px;
     /* width: 100%; */
     text-align: center;
-    padding: .5em 0;
+    padding: 2% 0;
 }
+
+/* ============ Product Drop Down Close ============ */
 
 /*====================  End Product Section ====================*/
 
 /* this will be for product details */
-
 .product-details > div {
-    width: 100%;
+    width: 90%;
 
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    border: var(--cosequin-blue) 1px solid;
 }
 
-.product-details .expandable div:last-child {
-    padding: 0 1em 0 .5em;
-}
-
-.product-details h5, .product-details p {
+.product-details p {
     text-align: left;
 }
 
-.product-details h5 {
+.product-details h2 {
+    margin: 0;
+}
+
+.product-details strong {
     color: var(--cosequin-light-blue);
-    margin: .75em 0;
+    margin: 5% 0;
 }
 
 .product-details caption {
@@ -399,16 +533,37 @@ ul.shopping-links {
     font-family: var(--source-sans-pro);
     text-transform: uppercase;
 
-    margin: .5em 0;
+    margin: 2.5% 0;
 }
 
+.product-details h3 {
+    color: var(--cosequin-blue);
+    font-size: 16px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.product-details .expandable {
+    width: 100%;
+    border: var(--cosequin-blue) 1px solid;
+    margin: 0;
+
+    padding: 3% 0;
+}
+
+.product-details .expandable div:last-child {
+    padding: 2.5%;
+}
+
+
+/* Tables */
 .product-details table {
     border-collapse: collapse;
 }
 
 .product-details tr, .product-details td {
     border: 1px solid black;
-    border-collapse: collapse;
 }
 
 .product-details .arrow {
@@ -420,6 +575,15 @@ ul.shopping-links {
     text-align: center;
     padding: .25em;
 }
+
+
+
+
+
+
+
+
+/* Specific Tables */
 
 .active-ingredients tr:nth-child(even) {
     background-color: var(--light-grey);
@@ -442,20 +606,22 @@ ul.shopping-links {
 
 /* ========================== Open Active Ingredients ========================== */
 
-.ingredients div {
+.ingredients div > div{
    max-width: 80%;
 }
 
-.ingredients h3 {
+.ingredients h2 {
     font-family: 'Roboto Slab', sans-serif;
     font-weight: 700;
     font-size: 20px;
 
-    margin: 1.5em 0;
+    margin: 5% 0;
     color: var(--cosequin-blue)
 }
 
 .ingredients p {
+    width: 90%;
+
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -467,13 +633,26 @@ ul.shopping-links {
 }
 
 .ingredients .emphasized {
+    text-align: center;
     margin: 1.5em 0;
 
     border-top: var(--cosequin-blue) 2px solid;
     border-bottom: var(--cosequin-blue) 2px solid;
 
-    padding-top: .5em;
-    padding-bottom: 1em;
+    padding-top: 2.5%;
+    padding-bottom: 5%;
+}
+
+.ingredients > div {
+    background-color: #F2F7FA;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding: 2.5% 0;
+
 }
 /* ========================== Close Active Ingredients ========================== */
 
@@ -583,11 +762,11 @@ footer > div:last-child a {
 /* THIS WILL BE FOR SPECIFIC ITEM CLASS RULES */
 
 li.location {
-    list-style-image: url('https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_location.svg');
+    list-style: url('https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_location.svg');
 }
 
 li.phone {
-    list-style-image: url('https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_location.svg');
+    list-style: url('https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_location.svg');
 }
 
 .uppercase {
@@ -602,17 +781,20 @@ li.phone {
     background-repeat: no-repeat;
     background-size: cover;
 
+    height: 60vh;
+    width: 100%;
 
-    
-    height: 25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    margin-top: 2em;
-    margin-bottom: 4em;
+    margin-top: 5%;
+    margin-bottom: 15%;
 }
 
 .girl-and-dog img {
     position: relative;
-    bottom: -13em;
+    bottom: -35vh;
     width: 90%;
 }
 
@@ -636,14 +818,14 @@ li.phone {
 
 
 /* showing / hiding items */
-.closed div:last-child {
+.closed > div:last-child, .closed > p:last-child {
     opacity: 0;
     position: absolute;
     pointer-events: none;   
     border: none;
 }
 
-.closed div:last-child * {
+.closed > *:last-child * {
     pointer-events: none;   
 }
 
@@ -679,3 +861,74 @@ li.phone {
 
 
 /* =================================== End QA Section ================================ */
+
+/* Image Positioning */
+
+.group-image {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+    
+    max-width: 90%;
+
+    height: 40vh;
+
+    margin-bottom: 5%;
+}
+
+.group-image img {
+    display: flex;
+    align-self: flex-end;
+
+    max-width: 20%;
+
+    height: auto;
+    flex-shrink: 1;
+
+    margin: 0 -1.5%;
+}
+
+.group-image .tighter {
+    margin: 0 -5%
+}
+
+.forward {
+    z-index: 1;
+}
+
+.back {
+    z-index: 0;
+}
+
+.seal {
+    position: absolute;
+    top: 40%;
+    width: 20%;
+
+    left: 10%
+}
+
+/* End Image Positioning */
+
+
+
+
+/* Tablet Screen Size */
+@media screen and (min-width: 820px) {
+    h1 {
+        font-size: 46px;
+    }
+
+    ul.shopping-links {
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    .why-cosequin > div {
+        flex-flow: row;
+        justify-content: space-between;
+        width: 80%;
+    }
+}

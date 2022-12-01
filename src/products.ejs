@@ -11,13 +11,16 @@
             <div>
                 <h4>Filter By Animal</h4>
                 <form class="selectorForm">
-                    <input type="radio" name="pets" id="dog" value="dogs" <%= (defaultAnimal=="dog") ? 'checked' : ''%>> 
-                    <label for="dog">DOGS</label><br>
-                    <input type="radio" name="pets" id="cat" value="cats" <%= (defaultAnimal=="cat") ? 'checked' : ''%>>
-                    <label for="cat">CATS</label><br>
+                    <div>
+                        <input type="radio" name="pets" id="dog" value="dogs" <%= (defaultAnimal=="dog") ? 'checked' : ''%>> 
+                        <label for="dog">DOGS</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" name="pets" id="cat" value="cats" <%= (defaultAnimal=="cat") ? 'checked' : ''%>>
+                        <label for="cat">CATS</label><br>
+                    </div>
                 </form>
             </div>
-
         </div>
         <% for (product of products) { %>
             <%- include('src/partials/product', product); %>

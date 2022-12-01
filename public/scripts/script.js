@@ -38,7 +38,7 @@ function bindExpandAll(button, sections) {
         // //console.log('clicking on expand/collapse all')
         if (isOneSectionExpanded(sections)) {
             // //console.log('one section is expanded');
-            closeSections(false, sections);
+            closeSections(sections);
             switchExpansionIcon(icon, false);
         }
         else {
@@ -48,7 +48,7 @@ function bindExpandAll(button, sections) {
     })
 }
 
-function bindExpansionListeners(expandableGroups, expandAllButton = null) {
+function bindExpansionListeners(expandableGroups, nonMenuExpandable = null, expandAllButton = null) {
     // //console.log("bind expansion listeners called");
     if (expandableGroups[0] != undefined) {
         expandableGroups.forEach(element => {
@@ -59,8 +59,9 @@ function bindExpansionListeners(expandableGroups, expandAllButton = null) {
                 else {
                     closeExpandable(element);
                 }
-                if (expandAllButton) {
-                    updateExpandAllIcon(expandAllButton, expandableGroups)
+
+                if (expandAllButton && nonMenuExpandable) {
+                    updateExpandAllIcon(expandAllButton, nonMenuExpandable)
                 }
             });
         });
@@ -72,7 +73,7 @@ function bindExpansionListeners(expandableGroups, expandAllButton = null) {
 
 function isOneSectionExpanded(expandableGroups) {
     for (let expandable of expandableGroups) {
-        if (expandable.lastElementChild.classList.contains('viewable')) {
+        if (!expandable.classList.contains('closed')) {
             return true;
         }
     }
@@ -80,27 +81,15 @@ function isOneSectionExpanded(expandableGroups) {
     return false;
 }
 
-function closeSections(shouldOpenFirst, sections) {
-    if (shouldOpenFirst) {
-        sections.forEach((element, index) => {
-            if (index != 0) {
-                closeExpandable(element);
-            }
-            else {
-                openExpandable(element);
-            }
-        })
-    }
-    else {
-        sections.forEach(element => {
-            closeExpandable(element);
-        })
-    }
+function closeSections(sections) {
+    sections.forEach(element => {
+        closeExpandable(element);
+    })
 }
 
 function openSections(sections) {
     sections.forEach(element => {
-        openExpansion(element);
+        openExpandable(element);
     });
 }
 
@@ -110,7 +99,7 @@ function showElement(element) {
 }
 
 function hideElement(element) {
-    element.classList.add('closed');
+    element.classList.add('hidden');
     switchExpansionIcon(element.querySelector('.open_close_icon'), false);
 }
 
@@ -160,14 +149,27 @@ function switchExpansionIcon(icon, isExpanding) {
 
 // These are the actual calls for the script
 
-let expandAllButton = document.querySelector('#expand_collapse_all');
-let expandableSections = document.querySelectorAll('.expandable');
+const expandAllButton = document.querySelector('#expand_collapse_all');
+const expandableSections = document.querySelectorAll('.expandable');
 
 if (expandableSections.length != 0) {
     // //console.log("there are expandable sections");
+
+    const nonMenuExpandables = Array();
+    expandableSections.forEach(element => {
+        if (element.parentElement.id != 'menu') {
+            // console.log(`This element ${element} is not a menu item`);
+            nonMenuExpandables.push(element);
+        }
+    });
+
     if (expandAllButton) {
-        bindExpandAll(expandAllButton, expandableSections);
-        bindExpansionListeners(expandableSections, expandAllButton);
+        bindExpandAll(expandAllButton, nonMenuExpandables);
+
+        
+
+        // console.log(nonMenuExpandables);
+        bindExpansionListeners(nonMenuExpandables, expandAllButton);
     }
     else {
         bindExpansionListeners(expandableSections);

@@ -1,11 +1,11 @@
 {
     "header": {
-        "title": "Dog Chews Page | Cosequin Canada"
+        "title": "Capsules | Cosequin For Cats"
     },
     "landing": {
-        "header": "<span class=\"regulatory\">cosequin</span> Maximum Strength with MSM Plus Omega-3's Soft Chews",
-        "image": "cosequin_dog_chews_display.png",
-        "isAmazonOnly": false,
+        "header": "<span class=\"regulatory\">cosequin</span> For Cats Capsules",
+        "image": "cosequin_cat_capsules_display.webp",
+        "isAmazonOnly": true,
         "shopButtons": {
             "amazon": "",
             "costco": "",
@@ -13,73 +13,54 @@
         }
     },
     "whyCosequin": {
-        "header": "WHY <span class=\"regulatory\">cosequin</span> FOR DOGS?",
-        "tagline": "<span class=\"regulatory\">cosequin</span> is a scientifically researched, joint health supplement formulated to help support dog joint health.",
+        "header": "WHY <span class=\"regulatory\">Cosequin</span> FOR CATS?",
+        "tagline": "<span class=\"regulatory\">Cosequin</span> is a scientifically researched, joint health supplement formulated to help support cat joint health.",
         "bulletPoints": [
-            "#1 U.S. Veterinarian Recommended Retail Joint Health Supplement Brand (arrow)",
-            "<span class=\"regulatory\">cosequin</span> is a high-quality joint health supplement",
+            "#1 U.S. Veterinarian Recommended Retail Joint Health Supplement Brand &#9660",
+            "<span class=\"regulatory\">Cosequin</span> is a high-quality joint health supplement",
             "Manufactured under very strict quality standards",
-            "Formulated for dogs of all sizes"
+            "Formulated in a convenient capsule"
         ]
     },
     "productDetails": {
         "productDescription": {
-            "header": "What is <span class=\"regulatory\">Cosequin</span> Maximum Strength with MSM Plus Omega-3's Soft Chews?",
-            "body": "<span class=\"regulatory\">cosequin</span> Maximum Strength with MSM Plus Omega-3’s contains glucosamine hydrochloride, sodium chondroitin sulfate, and methylsulfonylmethane (MSM). This combination of ingredients helps support your dog’s healthy cartilage. Each soft chew also contains omega-3 fatty acids to help support skin & coat health."
+            "header": "What is <span class=\"regulatory\">Cosequin</span> for Cats Capsules?",
+            "body": "<span class=\"regulatory\">cosequin</span> for Cats, the original feline joint health supplement, contains glucosamine hydrochloride and sodium chondroitin sulfate in a convenient capsule. These ingredients have been scientifically formulated to help support the health of your cat’s joints. "
         },
         "productFacts": {
-            "caption": "Active Ingredients Per Chew:",
+            "caption": "Active Ingredients Per Capsule:",
             "entries": [
                 [
                     "Glucosamine Hydrochloride (<span class=\"regulatory\">FCHG49</span>)",
-                    "600 mg"
-                ],
-                [
-                    "Methylsulfonylmethane (MSM)",
-                    "400 mg"
+                    "125 mg"
                 ],
                 [
                     "Sodium Chondroitin Sulfate (<span class=\"regulatory\">TRH122</span>)",
-                    "300 mg<span class=\"arrow\">&#9650</span>"
+                    "100 mg<span class=\"arrow\">&#9650</span>"
                 ],
                 [
-                    "Total Omega-3's",
-                    "70 mg"
-                ],
-                [
-                    "EPA",
-                    "35 mg"
-                ],
-                [
-                    "DHA",
-                    "20 mg"
+                    "Manganese (from manganese ascorbate)",
+                    "1 mg"
                 ]
             ]
         },
         "directions": {
-            "caption": "Number of Soft Chews",
+            "caption": "Number of Capsules",
             "header": [
-                "Weight",
-                "Initial 4-6 Week Period",
-                "After Initial 6 Weeks"
+                ["INITIAL PERIOD 4-6 WEEKS"],
+                ["Weight", "Daily Level"]
             ],
             "entries": [
                 [
-                    "10-29lbs / 4.5-13.5kg",
-                    "1 daily",
-                    "1 every other day"
+                    "Under 10 lbs",
+                    "1 capsule"
                 ],
                 [
-                    "30-59lbs / 13.6-27kg",
-                    "2 daily",
-                    "1 daily"
-                ],
-                [
-                    "60lbs and over / 27kg and over",
-                    "3 daily",
-                    "1-2 daily"
+                    "Over 10 lbs",
+                    "2 capsules"
                 ]
-            ]
+            ],
+            "furtherDirections": "Once desired response is obtained, capsules may be given every other day for maintenance. Number of capsules given may be increased at any time depending on your cat’s needs. Administer at mealtime"
         }
     },
     "activeIngredients": {
@@ -93,17 +74,12 @@
                 "body": "Supports healthy joint function."
             },
             {
-                "title": "Methylsulfonylmethane (MSM):",
-                "body": "Provides sulfur, which helps support joint health in dogs."
-            },
-            {
-                "title": "Omega-3 Fatty Acids:",
-                "body": "Supports skin and coat health."
+                "title": "Manganese:",
+                "body": "Provides cartilage support."
             }
         ],
-        "emphasized": "The combination of <strong>Glucosamine</strong>, <strong>Chondroitin Sulfate</strong>, and <strong>MSM</strong> helps support healthy cartilage."
+        "emphasized": "The combination of <strong>Glucosamine</strong> and <strong>Chondroitin Sulfate</strong> have been shown to support the cat's cartilage and connective tissue."
     },
-
 
     "AWSurl": "../../public",
     "ImageAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/img/",

@@ -4,14 +4,22 @@
   "description": "This is just to run ejs templates on my Cosequin Canada stack",
   "main": "app.js",
   "scripts": {
-    "build": "npx npm-run-all build:* --npm-path npm",
+    "rebuild": "rm -r build; npm run build;",
+    "build": "mkdir build; mkdir build/products; mkdir build/product_pages; npx npm-run-all build:* --npm-path npm;",
+    "lint": "npx npm-run-all lint:* --npm-path npm",
+
+
     "build:home": "npx ejs ./src/index.ejs -o ./build/index.html -f ./src/data/index.json;",
-    "build:dog-products": "npx ejs ./src/products.ejs -o ./build/dog_products.html -f ./src/data/dog-product.json;",
-    "build:cat-products": "npx ejs ./src/products.ejs -o ./build/cat_products.html -f ./src/data/cat-products.json;",
-    "build:dog-chews": "npx ejs ./src/product-page.ejs -o ./build/cosequin-msm-omega3.html -f ./src/data/dog-chews.json;",
-    "build:dog-chewables": "npx ejs ./src/product-page.ejs -o ./build/cosequin-chewable-tablets.html -f ./src/data/dog-chewable-tablets.json;",
-    "build:cat-extra-strength": "npx ejs ./src/product-page.ejs -o ./build/cosequin-cat-extra-strength.html -f ./src/data/cat-capsules-extra-strength.json;",
-    "build:cat": "npx ejs ./src/product-page.ejs -o ./build/cosequin-cat.html -f ./src/data/cat-capsules.json;"
+    "build:dog-products": "npx ejs ./src/products.ejs -o ./build/product_pages/dogs.html -f ./src/data/dog-products.json;",
+    "build:cat-products": "npx ejs ./src/products.ejs -o ./build/product_pages/cats.html -f ./src/data/cat-products.json;",
+    "build:dog-chews": "npx ejs ./src/product-page.ejs -o ./build/products/dog_chews.html -f ./src/data/dog-chews.json;",
+    "build:dog-chewables": "npx ejs ./src/product-page.ejs -o ./build/products/dog_chewable_tablets.html -f ./src/data/dog-chewable-tablets.json;",
+    "build:cat-extra-strength": "npx ejs ./src/product-page.ejs -o ./build/products/cat_max_strength_capsules.html -f ./src/data/cat-capsules-extra-strength.json;",
+    "build:cat": "npx ejs ./src/product-page.ejs -o ./build/products/cat_capsules.html -f ./src/data/cat-capsules.json;",
+
+    "lint:index": "npx ejs-lint ./src/index.ejs;",
+    "lint:products": "npx ejs-lint ./src/products.ejs",
+    "lint:product-page": "npx ejs-lint ./src/product-page.ejs"
   },
   "author": "David Lothers",
   "license": "ISC",

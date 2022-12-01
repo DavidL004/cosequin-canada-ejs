@@ -4,7 +4,7 @@
     },
     "landing": {
         "header": "<span class=\"regulatory\">cosequin</span> Maximum Strength with MSM Plus Omega-3's Soft Chews",
-        "image": "cosequin_dog_chews_display.png",
+        "image": "cosequin_dog_chews_display.webp",
         "isAmazonOnly": false,
         "shopButtons": {
             "amazon": "",
@@ -59,9 +59,11 @@
         "directions": {
             "caption": "Number of Soft Chews",
             "header": [
-                "Weight",
-                "Initial 4-6 Week Period",
-                "After Initial 6 Weeks"
+                [
+                    "Weight",
+                    "Initial 4-6 Week Period",
+                    "After Initial 6 Weeks"
+                ]
             ],
             "entries": [
                 [
@@ -79,7 +81,8 @@
                     "3 daily",
                     "1-2 daily"
                 ]
-            ]
+            ],
+            "furtherDirections": ""
         }
     },
     "activeIngredients": {

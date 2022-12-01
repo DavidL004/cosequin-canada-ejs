@@ -1,29 +1,36 @@
 <%- include('src/partials/head'); %>
 
 <main>
-    <%- include('src/partials/landing', {header: landing.header, tableImageURL: landing.image}); %>
+    <%- include('src/partials/landing'); %>
     <section class="why-cosequin">
         <h2>Why <span class="regulatory">cosequin</span>?</h2>
         <p><span class="regulatory">cosequin</span>  Joint Health Supplement is a scientifically researched nutritional supplement formulated to help support and maintain the health of pets' joints and cartilage.</p>
         <div>
+          <div>
             <img class='icons large' src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_certificate.svg" alt="">
             <p><span class="regulatory">cosequin</span> is a high-quality joint health supplement.</p>
-        </div>
-        <div>
+          </div>
+          <div>
             <img class='icons large' src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_RD.svg" alt="">
             <p>Manufactured under very strict quality standards.</p>
-        </div>
-        <div>
+          </div>
+          <div>
             <img class='icons large' src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_paw_large_small.svg" alt="">
             <p>Formulated for dogs and cats of all sizes.</p>
+          </div>
         </div>
+        
     </section>
 
     <section>
         <h2 class="uppercase">Trust <span class="regulatory">cosequin</span> to help keep your pet moving </h2>
         <p>For Over 20 Years, <span class="regulatory">cosequin</span> Joint Health Supplements Have Been Supporting Pets And Their Active Lifestyle.</p>
         <div class="girl-and-dog">
-            <img src="https://s3.amazonaws.com/static.cosequin.com/ca/img/product-group-2.png" alt="">
+            <div class="group-image">
+              <% for(let image of secondProductDisplay) { %>
+                <img width="<%=image.width%>" class="<%=image.class%>" src="<%=image.src%>" alt="">
+              <% } %>
+            </div>
         </div>
         <p>
             For over 20 years, the <span class="regulatory">cosequin</span> Joint Health Supplement brand has researched, developed, and manufactured high-quality joint health supplements for pets. <span class="regulatory">cosequin</span> products are subjected to rigorous quality control measures to deliver products that are safe and effective for your pets. <br><br>
@@ -39,64 +46,22 @@
         <div class="float-right">
           <button id="expand_collapse_all">
             <p>Expand / Collapse All</p>
-            <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
+            <img class="open_close_icon" src="<%=`${GoogleIconsAWSurl}open_grey.svg`%>" data-image-open="<%=`${GoogleIconsAWSurl}close_grey.svg`%>" data-image-close="<%=`${GoogleIconsAWSurl}open_grey.svg`%>" alt="Open/Close">
           </button>
         </div>
-        <div class="expandable">
-          <div>
-            <h3>
-              <span>WHAT IS <span class="regulatory">COSEQUIN</span>?</span>
-            </h3>
-            <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
+        <% faqs.forEach(function (qa, index) { %>
+          <div class="expandable <%=(index == 0) ? "" : "closed"%>">
+            <div>
+              <h3>
+                <%- qa.question %>
+              </h3>
+              <img class="open_close_icon" src="<%=(index == 0) ? `${GoogleIconsAWSurl}close_white.svg` : `${GoogleIconsAWSurl}open_white.svg`%>" data-image-open="<%=`${GoogleIconsAWSurl}close_white.svg`%>" data-image-close="<%=`${GoogleIconsAWSurl}open_white.svg`%>" alt="Open/Close">
+            </div>
+            <p>
+              <%- qa.answer %>
+            </p>
           </div>
-          <p class="viewable">
-            <span class="regulatory">COSEQUIN</span> is a scientifically researched nutritional supplement formulated to help dogs maintain healthy joints. <span class="regulatory">COSEQUIN</span> joint health supplements are made with high-quality ingredients and subjected to stringent quality control measures to ensure they meet label claim. <span class="regulatory">COSEQUIN</span> Maximum Strength Plus MSM contains Glucosamine Hydrochloride, Sodium Chondroitin Sulfate, and MSM (Methylsulfonylmethane). This combination of ingredients helps maintain your dog’s cartilage and connective tissue. Each chewable tablet also contains Hyaluronic acid (HA), a main component of synovial fluid found in joints and a key component of healthy joints in dogs.
-          </p>
-        </div>
-        <div class="expandable closed">
-          <div>
-             <h3>
-              WHAT IS JOINT CARTILAGE?
-             </h3>
-             <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
-          </div>
-          <p>
-            Cartilage is a slippery and resilient tissue produced and maintained by its own specialized cells. It cushions the surfaces where two or more bones meet to form a flexible joint.
-          </p>
-        </div>
-        <div class="expandable closed">
-          <div>
-            <h3>
-              HOW DOES <span class="regulatory">COSEQUIN</span> JOINT HEALTH SUPPLEMENT WORK?
-            </h3>
-            <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
-          </div>
-          <p>
-            The ingredients in <span class="regulatory">COSEQUIN</span> work together to help support and protect the cartilage. Glucosamine hydrochloride acts as a building block of cartilage by supplying a key nutrient that keeps cartilage healthy and functioning properly. Chondroitin sulfate supports healthy joint function. MSM provides additional joint health support. Hyaluronic Acid (HA) provides viscosity to the synovial fluid, supporting joint function and reducing friction between joint surfaces.
-          </p>
-        </div>
-        <div class="expandable closed">
-          <div>
-             <h3>
-              ARE THERE ANY SIDE EFFECTS?
-             </h3>
-             <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
-          </div>
-          <p>
-            Some dogs may experience a mild gastrointestinal upset, similar to symptoms which occur when food is switched. If this is the case, you can try offering <span class="regulatory">COSEQUIN</span> with a meal.
-          </p>
-        </div>
-        <div class="expandable closed">
-          <div>
-            <h3>
-              I GIVE MY DOG A FOOD THAT CONTAINS GLUCOSAMINE AND CHONDROITIN SULFATE.<br>DO I STILL NEED <span class="regulatory">COSEQUIN</span>?
-            </h3>
-            <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
-          </div>
-          <p>
-            Yes. The amount of glucosamine and chondroitin sulfate in dog food is often minimal. Even if these diets contained high-quality glucosamine and chondroitin sulfate, your dog may need to consume more than the daily requirement of food to obtain the amounts of glucosamine and chondroitin sulfate found in <span class="regulatory">COSEQUIN</span>. In addition, both glucosamine and chondroitin sulfate may degrade when subjected to heat or extreme pressure during the manufacturing process of commercial dog food.
-          </p>
-        </div>
+        <% }) %>
       </section>
 </main>
 

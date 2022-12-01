@@ -1,10 +1,10 @@
 {
     "header": {
-        "title": "Dog Chews Page | Cosequin Canada"
+        "title": "Dog Chewable Page | Cosequin Canada"
     },
     "landing": {
         "header": "<span class=\"regulatory\">Cosequin</span> Maximum Strength Plus MSM Chewable Tablets",
-        "image": "cosequin_chewable_tablet.png",
+        "image": "cosequin_dog_chewable_display.webp",
         "isAmazonOnly": false,
         "shopButtons": {
             "amazon": "",
@@ -52,9 +52,11 @@
         "directions": {
             "caption": "Number of Soft Chews",
             "header": [
-                "Weight",
-                "Initial 4-6 Week Period",
-                "After Initial 6 Weeks"
+                [
+                    "Weight",
+                    "Initial 4-6 Week Period",
+                    "After Initial 6 Weeks"
+                ]
             ],
             "entries": [
                 [
@@ -77,7 +79,8 @@
                     "3 daily",
                     "1-2 daily"
                 ]
-            ]
+            ],
+            "furtherDirections": ""
         }
     },
     "activeIngredients": {

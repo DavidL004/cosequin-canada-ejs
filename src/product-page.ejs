@@ -11,41 +11,45 @@
         <p><strong>
             <%- whyCosequin.tagline %> 
         </strong></p>
-        <ul class="paw-list">
-            <% for (bullet of whyCosequin.bulletPoints) { %>
-                <li> <%- bullet %> </li>
-            <% } %>
-        </ul>
+        <%# This is a custom bullet list %>
+        <% for (bullet of whyCosequin.bulletPoints) { %>
+            <div class="custom-bullet-list">
+                <img src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_paw_print_solid.svg" alt="">
+                <p><%-bullet%></p>
+            </div>  
+        <% } %>
         <%- include('src/partials/shop-buttons'); %>
     </section>
     <%- include('src/partials/horizontal-rule', {src: 'https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_book.svg'}); %>
     <section class="product-details">
-        <h3>
+        <h2>
             Product Details
-        </h3>
+        </h2>
         <div>
             <div class="expandable closed">
                 <div>
-                   <h4>
+                   <h3>
                         Product Description
-                   </h4>
-                   <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
+                   </h3>
+                   <img class="open_close_icon" src="<%=`${GoogleIconsAWSurl}open_blue.svg`%>" data-image-open="<%=`${GoogleIconsAWSurl}close_blue.svg`%>" data-image-close="<%=`${GoogleIconsAWSurl}open_blue.svg`%>" alt="Open/Close">
                 </div>
                 <div>
-                    <h5>
+                    <p>
+                        <strong>
                         <%- productDetails.productDescription.header %>
-                    </h5>
+                        </strong>
+                    </p>
                     <p>
                         <%- productDetails.productDescription.body %>
                     </p>    
                 </div>
-              </div>
-              <div class="expandable closed">
+            </div>
+            <div class="expandable closed">
                 <div>
-                  <h4>
+                  <h3>
                     Product Facts
-                  </h4>
-                  <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
+                  </h3>
+                  <img class="open_close_icon" src="<%=`${GoogleIconsAWSurl}open_blue.svg`%>" data-image-open="<%=`${GoogleIconsAWSurl}close_blue.svg`%>" data-image-close="<%=`${GoogleIconsAWSurl}open_blue.svg`%>" alt="Open/Close">
                 </div>
                 <div>
                     <table class="active-ingredients">
@@ -62,22 +66,33 @@
                     </table>
                     <p><span class="arrow">&#9650</span>Contains up to 10% moisture</p>
                 </div>
-              </div>
-              <div class="expandable closed">
+            </div>
+            <div class="expandable closed">
                 <div>
-                   <h4>
+                   <h3>
                     Directions For Use
-                   </h4>
-                   <img class="open_close_icon" src="https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/google_font_plus.svg" alt="Open/Close">
+                   </h3>
+                   <img class="open_close_icon" src="<%=`${GoogleIconsAWSurl}open_blue.svg`%>" data-image-open="<%=`${GoogleIconsAWSurl}close_blue.svg`%>" data-image-close="<%=`${GoogleIconsAWSurl}open_blue.svg`%>" alt="Open/Close">
                 </div>
                 <div>
                     <table class="directions">
                         <caption> <%- productDetails.productFacts.caption %></caption>
-                        <tr>
-                            <% for (header of productDetails.directions.header) { %>
+                        <% if (productDetails.directions.header.length == 2) { %>
+                            <% let rows = productDetails.directions.header[1].length %>
+                            <% for (headerRow of productDetails.directions.header) { %>
+                                <% if (headerRow.length == 1) { %>
+                                    <tr><th colspan="<%=rows%>"><%= headerRow[0] %></th></tr> 
+                                <% } else { %>
+                                    <% for (header of headerRow) { %>
+                                        <th><%=header%></th>
+                                    <% } %>
+                                <% } %>
+                            <% } %> 
+                        <% } else { %>
+                            <% for (header of productDetails.directions.header[0]) { %>
                                 <th> <%- header %> </th>
                             <% } %>
-                        </tr>
+                        <% } %>
                         <% for (row of productDetails.directions.entries) { %>
                             <tr>
                                 <% for (entry of row) { %>
@@ -86,21 +101,27 @@
                             </tr>
                         <% } %>
                     </table>
+                    <% if (productDetails.productFacts.furtherDirections != "") {%>
+                        <p><%- productDetails.productFacts.furtherDirections %></p>
+                    <% } %> 
+                    
                 </div>
-              </div>
+            </div>
         </div>
     </section>
     <%- include('src/partials/horizontal-rule', {src: 'https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_RD.svg'}); %>
     <section class="ingredients">
-        <h3>Active Ingredients in <span class="regulatory">Cosequin</span></h3>
-        <% for (claim of activeIngredients.entries) { %> 
-            <p>
-                <strong><%- claim.title %></strong>
-                <%- claim.body %>
-            </p>
-        <% } %>
-        <div class="emphasized">
-            <%- activeIngredients.emphasized %>
+        <h2>Active Ingredients in <span class="regulatory">Cosequin</span></h2>
+        <div>
+            <% for (claim of activeIngredients.entries) { %> 
+                <p>
+                    <strong><%- claim.title %></strong>
+                    <%- claim.body %>
+                </p>
+            <% } %>
+            <div class="emphasized">
+                <%- activeIngredients.emphasized %>
+            </div>
         </div>
     </section>
 

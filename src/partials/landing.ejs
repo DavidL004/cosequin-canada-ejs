@@ -1,5 +1,9 @@
 <section class="landing-section">
-    <h1><%- header %></h1>
-    <%- include('shop-buttons') %> 
-    <img src=<%= tableImageURL %> alt="">
+    <h1><%- landing.header %></h1>
+    <%- include('shop-buttons') %>
+    <div class="group-image">
+     <% for (let image of landing.image) { %>
+         <img width="<%=image.width%>" class="<%=image.class%>" src="<%=image.src%>" alt="">
+     <% } %>
+    </div>
 </section>
