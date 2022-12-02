@@ -1,11 +1,7 @@
-html {
-    max-width: 100%;
-}
-
 body {
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     margin: 0;
-    max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,10 +27,17 @@ h1 {
     font-family: 'Roboto Slab', sans-serif;
 }
 
-h2 {
+/* h2 {
     color: var(--cosequin-blue);
     font-size: 24px;
     font-family: var(--source-sans-pro);
+} */
+
+h2 {
+    font-family: var(--raleway);
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 h3 {
@@ -44,6 +47,11 @@ h3 {
 
 img {
     max-width: 100%;
+}
+
+picture {
+    display: flex;
+    justify-content: center;
 }
 
 img.icons {
@@ -146,8 +154,6 @@ ul.shopping-links {
     padding-bottom: 5%;
 
     margin-top: 0;
-
-    /* height: var(--after-header-height); */
 }
 
 .landing-section img, .where-to-buy img {
@@ -158,6 +164,13 @@ ul.shopping-links {
 .landing-section ul {
     padding-top: 0%;
 }
+
+.landing-section .emphasized {
+    text-shadow: -1px 1px black,
+                 1px 1px black,
+                 1px -1px black,
+                 -1px -1px black;
+}
 /* end landing section */
 
 /* open why cosequin section*/
@@ -165,8 +178,20 @@ ul.shopping-links {
     display: flex;
     flex-flow: column;
     align-items: center;
+}
 
+.why-cosequin > div div {
     width: 50%;
+}
+
+.why-cosequin > div {
+    width: 100%;
+}
+
+.why-cosequin h2 {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
 }
 /* close why cosequin section */
 
@@ -268,6 +293,19 @@ ul.shopping-links {
     justify-content: space-between;
 }
 
+
+
+.expandable > div:last-child p {
+    text-align: left;
+}
+
+.faq-section .expandable > div:last-child p {
+    padding: 2.5% 2.5% 10% 2.5%;
+}
+
+.product-details .expandable > div:last-child p {
+    padding: 1.5%;
+}
 /* .expandable > div:first-child img {
     margin-right: 1em;
 } */
@@ -282,6 +320,13 @@ ul.shopping-links {
 
 .faq-section h2 {
     margin-top: 2%;
+    color: var(--cosequin-blue);
+}
+
+.faq-section h3 {
+    font-size: 16px;
+    margin: 1%;
+    text-align: left;
 }
 
 .faq-section button {
@@ -296,22 +341,21 @@ ul.shopping-links {
 }
 
 /* probably comment this out */
-.faq-section .expandable > p {
+.faq-section .expandable > div:last-child {
     border-radius: 0 0 5px 5px;
     padding: .5em .25em;
     margin: 0;
     background-color: var(--light-grey);
+
+    display: flex;
+    justify-content: center;
 }
 
-.faq-section .expandable div:first-child h3 {
-    margin: 0;
-    text-align: left;
-}
 
 .faq-section .expandable div:first-child {
     color: white;
     background-color: var(--cosequin-blue);
-    padding: 2.5% 5%;
+    padding: 2.5%;
     border-radius: 5px 5px 0px 0px;
     width: 100%;
 }
@@ -328,6 +372,7 @@ ul.shopping-links {
 .filter {
     width: 80%;
     border: 1px solid var(--cosequin-blue);
+    margin: 5% 0;
 }
 
 .filter.closed {
@@ -414,7 +459,7 @@ input[type="radio"]:checked ~ label {
 }
 
 .product > img {
-    width: 60%;
+    width: 50%;
 }
 
 .product p, .product h4, .product a {
@@ -434,12 +479,24 @@ input[type="radio"]:checked ~ label {
 }
 
 .product > h4 {
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .product > a {
     font-size: 14px;
     color: #606060;
+}
+
+.product .expandable {
+    margin: 5% 0;
+}
+
+.product .expandable div:first-child p {
+    margin-right: 15%;
+}
+
+.product .expandable div:first-child {
+    justify-content: flex-end;
 }
 
 
@@ -519,7 +576,7 @@ input[type="radio"]:checked ~ label {
 }
 
 .product-details h2 {
-    margin: 0;
+    margin-bottom: 5%;
 }
 
 .product-details strong {
@@ -667,6 +724,7 @@ input[type="radio"]:checked ~ label {
     font-family: 'Roboto Slab', sans-serif;
     font-weight: 700;
     font-size: 20px;
+    margin: 0;
 }
 
 /* Final Where to Buy call end */
@@ -679,10 +737,10 @@ input[type="radio"]:checked ~ label {
 
 /* general div formatting */
 footer > div:first-child {
-    background-color: var(--cosequin-blue);
+    border-top: solid 1vh var(--footer-blue);
 
-    padding: .5em;
-    padding-bottom: 4em;
+
+    background-color: var(--cosequin-blue);
 
 
     display: flex;
@@ -694,40 +752,46 @@ footer > div:first-child {
 
 /* targeted towards Contact Us */
 footer > div:first-child > p {
+
     text-transform: uppercase;
     font-weight: bolder;
-
+    
+    text-align: left;
     margin-right: auto;
+    padding-left: 3%;
+    margin-left: 7%;
+    
+    
 
     border-left: var(--white) 2px solid;
-    padding-left: .5em;
 }
 
 footer .logo {
     width: 65%;
 
-    padding: .5em 0;
-
-    margin: 2em 0;
+    margin: 10% 0;
 
     border-bottom: var(--white) 1px solid;
 }
 
 .contact-footer-div {
     width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    margin-bottom: 20%;
 }
 
 .contact-footer-div div {
     display: flex;
-    flex-direction: row;
-    margin: .25em .5em;
+    margin: 2.5% 5%;
+    width: 100%;
 }
 
 .contact-footer-div p {
-    padding-left: .5em;
+    padding-left: 2.5%;
     text-align: left;
 }
 
@@ -738,12 +802,22 @@ footer .logo {
 footer > div:last-child {
     background-color: var(--footer-blue);
 
-    padding: 2em .5em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding: 5% 1%;
     color: var(--white);
 }
 
 footer > div:last-child p {
     margin-bottom: 1em;
+}
+
+footer > div:last-child ul {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 footer > div:last-child a {
@@ -753,7 +827,7 @@ footer > div:last-child a {
     text-decoration: none;
     color: lightgray;
 
-    font-size: .5em;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -776,7 +850,7 @@ li.phone {
 
 /* Section where Cosequin products are laid on top of a background */
 .girl-and-dog {
-    background-image: url('https://s3.amazonaws.com/static.cosequin.com/ca/img/section-Steps-of-Life-Video.jpg');
+    background-image: url('https://s3.amazonaws.com/static.cosequin.com/ca/img/section_background_girl_and_dog.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -792,10 +866,14 @@ li.phone {
     margin-bottom: 15%;
 }
 
-.girl-and-dog img {
+.girl-and-dog picture {
     position: relative;
-    bottom: -35vh;
-    width: 90%;
+    top: 35%;
+}
+
+.girl-and-dog img {
+    height: 25vh;
+    max-width: 100%;
 }
 
 /* ============================== END SECTION ============================== */
@@ -862,63 +940,19 @@ li.phone {
 
 /* =================================== End QA Section ================================ */
 
-/* Image Positioning */
-
-.group-image {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    
-    
-    max-width: 90%;
-
-    height: 40vh;
-
-    margin-bottom: 5%;
-}
-
-.group-image img {
-    display: flex;
-    align-self: flex-end;
-
-    max-width: 20%;
-
-    height: auto;
-    flex-shrink: 1;
-
-    margin: 0 -1.5%;
-}
-
-.group-image .tighter {
-    margin: 0 -5%
-}
-
-.forward {
-    z-index: 1;
-}
-
-.back {
-    z-index: 0;
-}
-
-.seal {
-    position: absolute;
-    top: 40%;
-    width: 20%;
-
-    left: 10%
-}
-
-/* End Image Positioning */
-
-
 
 
 /* Tablet Screen Size */
 @media screen and (min-width: 820px) {
+    header {
+    }
+
     h1 {
         font-size: 46px;
+    }
+
+    p {
+        width: 90%;
     }
 
     ul.shopping-links {
@@ -926,9 +960,103 @@ li.phone {
         justify-content: center;
     }
 
-    .why-cosequin > div {
+    img {
+        max-width: 75%;
+    }
+
+    footer > div:first-child > * {
+        max-width: 50%;
+    }
+
+    footer > div:first-child > p {
+        margin-right: 0;
+    }
+
+    footer > div:last-child > p {
+        text-align: left;
+        text-indent: -14px;
+    }
+
+    footer > div:last-child .legal-list {
         flex-flow: row;
-        justify-content: space-between;
-        width: 80%;
+        justify-content: center;
+    }
+
+    footer > div:last-child .legal-list li {
+        padding: 0 3%;
+    }
+
+    footer > div:last-child .legal-list li:nth-child(2) {
+        border-left: var(--light-grey) 1px solid;
+        border-right: var(--light-grey) 1px solid;
+    }
+
+    .faq-section h2 {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    .faq-section h3 {
+        font-size: 20px;
+    }
+
+    .custom-horizontal-rule {
+        margin: 2.5% auto;
+    }
+
+    .girl-and-dog {
+        height: 40vh;
+        width: 100%;
+    
+        margin-top: 5%;
+        margin-bottom: 10%;
+
+        background-image: url("https://s3.amazonaws.com/static.cosequin.com/ca/img/section_background_girl_and_dog_focused.jpg");
+    }
+
+    .girl-and-dog img {
+        position: relative;
+        height: 25vh;
+        top: 10px;
+    }
+
+    .landing-section .emphasized {
+        text-shadow: none;
+    }
+
+    header a img {
+        width: 100%;
+    }
+
+    #menuButton {
+        flex-flow: row;
+        border: none;
+        margin: 0 3%;
+
+        width: 20%;
+    }
+
+    #menuButton img {
+        width: 30px;
+    }
+
+    #menuButton p {
+        text-transform: none;
+        margin: 0 auto;
+        color: var(--cosequin-blue);
+        font-weight: 700;
+    }
+
+    #menu .expandable > div:last-child {
+        width: 100%;
+    }
+
+    .why-cosequin > div {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .why-cosequin > div div {
+        width: 25%;
     }
 }

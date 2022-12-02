@@ -4,7 +4,11 @@
     },
     "landing": {
         "header": "<span class=\"regulatory\">cosequin</span> Cat Products",
-        "image": "cosequin_product_array_cats.png",
+        "image": {
+            "defaultImage": "cosequin_product_array_cats.png",
+            "altText": "",
+            "sources": []
+        },
         "isAmazonOnly": false,
         "shopButtons": {
             "amazon": "",
@@ -12,59 +16,5 @@
             "petSmart": ""
         }
     },
-    "defaultAnimal": "cat",
-    "products": [
-        {
-            "animalType": "dog",
-            "type": "Soft Chew",
-            "name": "<span class=\"regulatory\">Cosequin</span> Maximum Strength with MSM Plus Omega-3's",
-            "urls": {
-                "amazonURL": "testAmazonURL",
-                "costcoURL": "testCostcoURL",
-                "petSmartURL": "testPetSmartURL",
-                "productPageURL": "testLearnMoreURL",
-                "imgURL": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_dog_chews_display.png"
-            }
-        },
-        {
-            "animalType": "dog",
-            "type": "Chewable Tablet",
-            "name": "<span class=\"regulatory\">Cosequin</span> Maximum Strength Plus MSM",
-            "urls": {
-                "amazonURL": "testAmazonURL",
-                "costcoURL": "testCostcoURL",
-                "petSmartURL": "testPetSmartURL",
-                "productPageURL": "testLearnMoreURL",
-                "imgURL": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_chewable_tablet.png"
-            }
-        },
-        {
-            "animalType": "cat",
-            "type": "Capsule",
-            "name": "<span class=\"regulatory\">Cosequin</span> For Cats Maximum Strength Capsules",
-            "urls": {
-                "amazonURL": "testAmazonURL",
-                "costcoURL": "testCostcoURL",
-                "petSmartURL": "testPetSmartURL",
-                "productPageURL": "testLearnMoreURL",
-                "imgURL": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_cat_max_strength.png"
-            }
-        },
-        {
-            "animalType": "cat",
-            "type": "Capsule",
-            "name": "<span class=\"regulatory\">Cosequin</span> For Cats Capsules",
-            "urls": {
-                "amazonURL": "testAmazonURL",
-                "costcoURL": "testCostcoURL",
-                "petSmartURL": "testPetSmartURL",
-                "productPageURL": "testLearnMoreURL",
-                "imgURL": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_cats_capsules.svg"
-            }
-        }
-    ],
-
-    "AWSurl": "../../public",
-    "ImageAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/img/",
-    "GoogleIconsAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/"
+    "defaultAnimal": "cat"
 }

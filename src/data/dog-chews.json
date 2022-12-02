@@ -4,7 +4,11 @@
     },
     "landing": {
         "header": "<span class=\"regulatory\">cosequin</span> Maximum Strength with MSM Plus Omega-3's Soft Chews",
-        "image": "cosequin_dog_chews_display.webp",
+        "image": {
+            "defaultImage": "cosequin_dog_chews_display.webp",
+            "altText": "",
+            "sources": []
+        },
         "isAmazonOnly": false,
         "shopButtons": {
             "amazon": "",
@@ -16,7 +20,7 @@
         "header": "WHY <span class=\"regulatory\">cosequin</span> FOR DOGS?",
         "tagline": "<span class=\"regulatory\">cosequin</span> is a scientifically researched, joint health supplement formulated to help support dog joint health.",
         "bulletPoints": [
-            "#1 U.S. Veterinarian Recommended Retail Joint Health Supplement Brand (arrow)",
+            "#1 U.S. Veterinarian Recommended Retail Joint Health Supplement Brand &#9660",
             "<span class=\"regulatory\">cosequin</span> is a high-quality joint health supplement",
             "Manufactured under very strict quality standards",
             "Formulated for dogs of all sizes"
@@ -105,10 +109,5 @@
             }
         ],
         "emphasized": "The combination of <strong>Glucosamine</strong>, <strong>Chondroitin Sulfate</strong>, and <strong>MSM</strong> helps support healthy cartilage."
-    },
-
-
-    "AWSurl": "../../public",
-    "ImageAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/img/",
-    "GoogleIconsAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/"
+    }
 }

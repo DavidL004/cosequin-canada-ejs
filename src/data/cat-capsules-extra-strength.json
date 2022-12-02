@@ -4,7 +4,11 @@
     },
     "landing": {
         "header": "<span class=\"regulatory\">cosequin</span> For Cats Maximum Strength Capsules",
-        "image": "cosequin_cat_extra_display.webp",
+        "image": {
+            "defaultImage": "cosequin_cat_extra_display.webp",
+            "altText": "",
+            "sources": []
+        },
         "isAmazonOnly": false,
         "shopButtons": {
             "amazon": "",
@@ -79,10 +83,5 @@
             }
         ],
         "emphasized": "The combination of <strong>Glucosamine</strong> and <strong>Chondroitin Sulfate</strong> have been shown to support the cat's cartilage and connective tissue."
-    },
-
-
-    "AWSurl": "../../public",
-    "ImageAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/img/",
-    "GoogleIconsAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/"
+    }
 }

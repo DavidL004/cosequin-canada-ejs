@@ -5,10 +5,10 @@
 
 /* Header css */
 header {
-    padding: .5em 0;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
+    justify-content: space-between;
     border-bottom: 2px solid #0079C0;
     border-top: 10px solid #0079C0;
     height: var(--header-height);
@@ -20,107 +20,73 @@ header a {
 }
 
 header a img {
-    width: 85%;
+    width: 60%;
 }
 
 header button {
+    height: 100%;
     border: none;
-    border-left: lightgrey 1px dashed;
-    padding: 0em 1em;
+    border-left: lightgrey 1px solid;
+    padding: 0 5%;
     background-color: transparent;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 header button p {
-    font-size: .75em;
-    color: darkgrey;
+    text-transform: uppercase;
+
+    font-size: 14px;
     font-family: 'Source Sans Pro', 'Raleway', 'sans-serif';
 }
 
 header button img {
-    max-width: 80%;
-    min-width: 50%;
+    width: 70%;
 }
 /* header css end */
 
 /* How the nav items display */
+
 nav {
-    /* align-items: center;
-    display: flex;
-    flex-direction: column; */
     height: var(--after-header-height);
 }
 
-/* nav a {
-    color: #0079C0;
-    text-decoration: none;
-    width: 100%;
-    padding: 10px 0px;
-    border-bottom: 1px solid darkgrey;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Source Sans Pro', 'Raleway', 'sans-serif';
-    font-weight: 700;
-} */
-/* These are the items in the dropdown menu  */
-
-
-
-#menu a {
+nav a {
     color: black;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     display: block;
 
+    width: max-content;
 }
 
-#menu div a {
-    padding: .25em 0 .25em 2em;
-
-    font-weight: 400;
-}
-
-#menu .expandable {
-    width: 100%;
-    margin: 0;
-}
-
-#menu .expandable > div:first-child {
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    background-color: white;
-    padding: 0;
-    border-radius: 0;
-}
-
-#menu .expandable > div:first-child, #menu .expandable > div:last-child a {
-    border-bottom: darkslategray 1px solid;
-}
-
-#menu .expandable > div:first-child div {
-    flex-grow: 1;
-    padding: .5em;
-
-    background-color: white;
-}
-
-#menu .expandable > div:first-child div a {
-    padding: 0;
-    display: block;
-    width: fit-content;
+nav .expandable > div:first-child div a {
     font-weight: 900;
     text-transform: uppercase;
 }
 
-/* #menu .expandable > div:first-child img {
-    flex-grow: 0;
-} */
+nav .expandable {
+    margin: 0;
+}
 
-#menu .expandable > div:last-child {
+nav div, nav .expandable, nav .expandable > div:first-child, nav .expandable div:last-child a {
+    width: 100%;
+}
+
+nav .expandable > div:first-child, #menu .expandable > div:last-child a {
+    border-bottom: darkslategray 1px solid;
+}
+
+nav .expandable > div:last-child {
     background-color: #FAFAFA;
 }
 
-#menu .expandable > *:last-child {
-    padding: 0;
+nav .expandable > div:first-child, nav .expandable > div:last-child a {
+    padding: 2%;
+}
+
+nav .expandable > div:last-child a {
+    padding-left: 5%;
 }

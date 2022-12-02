@@ -1,0 +1,7 @@
+{
+    "AWSurl": "../../public",
+    "ImageAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/img/",
+    "GoogleIconsAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/",
+    "open_icon_white": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/open_white.svg",
+    "close_icon_white": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/close_white.svg"
+}

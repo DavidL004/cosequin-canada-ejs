@@ -4,72 +4,28 @@
     },
     "landing": {
         "header": "Explore Even More <span class=\"regulatory\">Cosequin</span> Joint Health Supplements",
-        "image": [
-            {
-                "width": "15%",
-                "class": "back",
-                "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_cat_extra_display.webp"
-            },
-            {
-                "width": "17.5%",
-                "class": "forward",
-                "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_cat_capsules_display.webp"
-            },
-            {
-                "width": "22.5%",
-                "class": "back",
-                "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_dog_chewable_box_display.png"
-            },
-            {
-                "width": "17.5%",
-                "class": "forward",
-                "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_dog_chewable_bottle_display.png" 
-            },
-            {
-                "width": "40%",
-                "class": "back tighter",
-                "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_dog_chews_display.webp"
-            },
-            {
-                "width": "",
-                "class": "seal",
-                "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/vet_seal.png"
-            }
-        ],
+        "image": {
+            "defaultImage": "cosequin_landing_dispay.png",
+            "altText": "",
+            "sources": []
+        },
         "isAmazonOnly": false,
         "shopButtons": {
-            "amazon": "",
-            "costco": "",
-            "petSmart": ""
+            "amazon": "test",
+            "costco": "test",
+            "petSmart": "test"
         }
     },
-    "secondProductDisplay": [
-        {
-            "width": "5%",
-            "class": "back",
-            "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_cat_extra_display.webp"
-        },
-        {
-            "width": "5%",
-            "class": "forward",
-            "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_cat_capsules_display.webp"
-        },
-        {
-            "width": "5%",
-            "class": "back",
-            "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_dog_chewable_box_display.png"
-        },
-        {
-            "width": "5%",
-            "class": "forward",
-            "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_dog_chewable_bottle_display.png" 
-        },
-        {
-            "width": "5%",
-            "class": "back tighter",
-            "src": "https://s3.amazonaws.com/static.cosequin.com/ca/img/cosequin_dog_chews_display.webp"
-        }
-    ],
+    "secondProductDisplay": {
+        "defaultImage": "cosequin_second_display.png",
+        "altText": "",
+        "sources": [
+            {
+                "img": "cosequin_second_display_expanded_small.png",
+                "deviceType": "tablet"
+            }
+        ]
+    },
     "faqs": [
         {
             "question": "WHAT IS <span class=\"regulatory\">COSEQUIN</span>?",
@@ -91,15 +47,5 @@
             "question": "I GIVE MY DOG A FOOD THAT CONTAINS GLUCOSAMINE AND CHONDROITIN SULFATE.<br>DO I STILL NEED <span class=\"regulatory\">COSEQUIN</span>?",
             "answer": "Yes. The amount of glucosamine and chondroitin sulfate in dog food is often minimal. Even if these diets contained high-quality glucosamine and chondroitin sulfate, your dog may need to consume more than the daily requirement of food to obtain the amounts of glucosamine and chondroitin sulfate found in <span class=\"regulatory\">COSEQUIN</span>. In addition, both glucosamine and chondroitin sulfate may degrade when subjected to heat or extreme pressure during the manufacturing process of commercial dog food."
         }
-    ],
-
-
-
-
-
-    "AWSurl": "../../public",
-    "ImageAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/img/",
-    "GoogleIconsAWSurl": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/",
-    "open_icon_white": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/open_white.svg",
-    "close_icon_white": "https://s3.amazonaws.com/static.cosequin.com/ca/google_icons/close_white.svg"
+    ]
 }

@@ -4,18 +4,33 @@
   "description": "This is just to run ejs templates on my Cosequin Canada stack",
   "main": "app.js",
   "scripts": {
+
+    "completeRebuild": "npm run rebuildJson; npm run rebuild;",
+    "completeBuild": "npm run buildJson; npm run build;",
+
     "rebuild": "rm -r build; npm run build;",
     "build": "mkdir build; mkdir build/products; mkdir build/product_pages; npx npm-run-all build:* --npm-path npm;",
+
     "lint": "npx npm-run-all lint:* --npm-path npm",
 
+    "buildJson": "npx npm-run-all buildJson:* --npm-path npm",
+    "rebuildJson": "rm -r build-json; npm run buildJson;",
 
-    "build:home": "npx ejs ./src/index.ejs -o ./build/index.html -f ./src/data/index.json;",
-    "build:dog-products": "npx ejs ./src/products.ejs -o ./build/product_pages/dogs.html -f ./src/data/dog-products.json;",
-    "build:cat-products": "npx ejs ./src/products.ejs -o ./build/product_pages/cats.html -f ./src/data/cat-products.json;",
-    "build:dog-chews": "npx ejs ./src/product-page.ejs -o ./build/products/dog_chews.html -f ./src/data/dog-chews.json;",
-    "build:dog-chewables": "npx ejs ./src/product-page.ejs -o ./build/products/dog_chewable_tablets.html -f ./src/data/dog-chewable-tablets.json;",
-    "build:cat-extra-strength": "npx ejs ./src/product-page.ejs -o ./build/products/cat_max_strength_capsules.html -f ./src/data/cat-capsules-extra-strength.json;",
-    "build:cat": "npx ejs ./src/product-page.ejs -o ./build/products/cat_capsules.html -f ./src/data/cat-capsules.json;",
+    "build:home": "npx ejs ./src/index.ejs -o ./build/index.html -f ./build-json/index-build.json;",
+    "build:dog-products": "npx ejs ./src/products.ejs -o ./build/product_pages/dogs.html -f build-json/dog-products-build.json;",
+    "build:cat-products": "npx ejs ./src/products.ejs -o ./build/product_pages/cats.html -f build-json/cat-products-build.json;",
+    "build:dog-chews": "npx ejs ./src/product-page.ejs -o ./build/products/dog_chews.html -f build-json/dog-chews-build.json;",
+    "build:dog-chewables": "npx ejs ./src/product-page.ejs -o ./build/products/dog_chewable_tablets.html -f build-json/dog-chewable-tablets-build.json;",
+    "build:cat-extra-strength": "npx ejs ./src/product-page.ejs -o ./build/products/cat_max_strength_capsules.html -f build-json/cat-capsules-extra-strength-build.json;",
+    "build:cat": "npx ejs ./src/product-page.ejs -o ./build/products/cat_capsules.html -f build-json/cat-capsules-build.json;",
+
+    "buildJson:home": "npx json-merger --pretty src/data/index.json src/data/shared/shared.json --output build-json/index-build.json",
+    "buildJson:dog-products": "npx json-merger --pretty src/data/dog-products.json src/data/shared/products.json src/data/shared/shared.json --output build-json/dog-products-build.json",
+    "buildJson:cat-products": "npx json-merger --pretty src/data/cat-products.json src/data/shared/products.json src/data/shared/shared.json --output build-json/cat-products-build.json",
+    "buildJson:dog-chews": "npx json-merger --pretty src/data/dog-chews.json src/data/shared/shared.json --output build-json/dog-chews-build.json",
+    "buildJson:dog-chewables": "npx json-merger --pretty src/data/dog-chewable-tablets.json src/data/shared/shared.json --output build-json/dog-chewable-tablets-build.json",
+    "buildJson:cat-extra-strength": "npx json-merger --pretty src/data/cat-capsules-extra-strength.json src/data/shared/shared.json --output build-json/cat-capsules-extra-strength-build.json",
+    "buildJson:cat": "npx json-merger --pretty src/data/cat-capsules.json src/data/shared/shared.json --output build-json/cat-capsules-build.json",
 
     "lint:index": "npx ejs-lint ./src/index.ejs;",
     "lint:products": "npx ejs-lint ./src/products.ejs",
@@ -28,6 +43,7 @@
   },
   "devDependencies": {
     "ejs-lint": "^2.0.0",
+    "json-merger": "^1.1.9",
     "npm-run-all": "^4.1.5"
   }
 }

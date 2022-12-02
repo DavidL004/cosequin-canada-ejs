@@ -1,68 +1,65 @@
 <%- include('src/partials/head'); %>
 
 <main>
-    <%- include('src/partials/landing'); %>
-    <section class="why-cosequin">
-        <h2>Why <span class="regulatory">cosequin</span>?</h2>
-        <p><span class="regulatory">cosequin</span>  Joint Health Supplement is a scientifically researched nutritional supplement formulated to help support and maintain the health of pets' joints and cartilage.</p>
+  <%- include('src/partials/landing', {amazonEmphasized: true}); %>
+  <section class="why-cosequin">
+      <h2>Why <span class="regulatory">cosequin</span>?</h2>
+      <p><span class="regulatory">cosequin</span>  Joint Health Supplement is a scientifically researched nutritional supplement formulated to help support and maintain the health of pets' joints and cartilage.</p>
+      <div>
         <div>
+          <img class='icons large' src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_certificate.svg" alt="">
+          <p><span class="regulatory">cosequin</span> is a high-quality joint health supplement.</p>
+        </div>
+        <div>
+          <img class='icons large' src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_RD.svg" alt="">
+          <p>Manufactured under very strict quality standards.</p>
+        </div>
+        <div>
+          <img class='icons large' src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_paw_large_small.svg" alt="">
+          <p>Formulated for dogs and cats of all sizes.</p>
+        </div>
+      </div>   
+  </section>
+
+  <section>
+      <h2 class="uppercase">Trust <span class="regulatory">cosequin</span> to help keep your pet moving </h2>
+      <p>For Over 20 Years, <span class="regulatory">cosequin</span> Joint Health Supplements Have Been Supporting Pets And Their Active Lifestyle.</p>
+      <div class="girl-and-dog">
+        <%- include('src/partials/picture_format', {display: secondProductDisplay}); %>
+      </div>
+      <p>
+          For over 20 years, the <span class="regulatory">cosequin</span> Joint Health Supplement brand has researched, developed, and manufactured high-quality joint health supplements for pets. <span class="regulatory">cosequin</span> products are subjected to rigorous quality control measures to deliver products that are safe and effective for your pets. <br><br>
+
+          For the <span class="regulatory">cosequin</span> brand, it's about more than just a product. It's about helping to support your pet's active lifestyle, so you can continue to make lasting memories!
+      </p>
+  </section>
+
+  <%- include('src/partials/horizontal-rule', {src: 'https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_FAQ.svg'}); %>
+
+  <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="float-right">
+        <button id="expand_collapse_all">
+          <p>Expand / Collapse All</p>
+          <img class="open_close_icon" src="<%=`${GoogleIconsAWSurl}open_grey.svg`%>" data-image-open="<%=`${GoogleIconsAWSurl}close_grey.svg`%>" data-image-close="<%=`${GoogleIconsAWSurl}open_grey.svg`%>" alt="Open/Close">
+        </button>
+      </div>
+      <% faqs.forEach(function (qa, index) { %>
+        <div class="expandable <%=(index == 0) ? "" : "closed"%>">
           <div>
-            <img class='icons large' src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_certificate.svg" alt="">
-            <p><span class="regulatory">cosequin</span> is a high-quality joint health supplement.</p>
+            <h3>
+              <%- qa.question %>
+            </h3>
+            <img class="open_close_icon" src="<%=(index == 0) ? `${GoogleIconsAWSurl}close_white.svg` : `${GoogleIconsAWSurl}open_white.svg`%>" data-image-open="<%=`${GoogleIconsAWSurl}close_white.svg`%>" data-image-close="<%=`${GoogleIconsAWSurl}open_white.svg`%>" alt="Open/Close">
           </div>
           <div>
-            <img class='icons large' src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_RD.svg" alt="">
-            <p>Manufactured under very strict quality standards.</p>
-          </div>
-          <div>
-            <img class='icons large' src="https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_paw_large_small.svg" alt="">
-            <p>Formulated for dogs and cats of all sizes.</p>
-          </div>
-        </div>
-        
-    </section>
-
-    <section>
-        <h2 class="uppercase">Trust <span class="regulatory">cosequin</span> to help keep your pet moving </h2>
-        <p>For Over 20 Years, <span class="regulatory">cosequin</span> Joint Health Supplements Have Been Supporting Pets And Their Active Lifestyle.</p>
-        <div class="girl-and-dog">
-            <div class="group-image">
-              <% for(let image of secondProductDisplay) { %>
-                <img width="<%=image.width%>" class="<%=image.class%>" src="<%=image.src%>" alt="">
-              <% } %>
-            </div>
-        </div>
-        <p>
-            For over 20 years, the <span class="regulatory">cosequin</span> Joint Health Supplement brand has researched, developed, and manufactured high-quality joint health supplements for pets. <span class="regulatory">cosequin</span> products are subjected to rigorous quality control measures to deliver products that are safe and effective for your pets. <br><br>
-
-            For the <span class="regulatory">cosequin</span> brand, it's about more than just a product. It's about helping to support your pet's active lifestyle, so you can continue to make lasting memories!
-        </p>
-    </section>
-
-    <%- include('src/partials/horizontal-rule', {src: 'https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_FAQ.svg'}); %>
-
-    <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="float-right">
-          <button id="expand_collapse_all">
-            <p>Expand / Collapse All</p>
-            <img class="open_close_icon" src="<%=`${GoogleIconsAWSurl}open_grey.svg`%>" data-image-open="<%=`${GoogleIconsAWSurl}close_grey.svg`%>" data-image-close="<%=`${GoogleIconsAWSurl}open_grey.svg`%>" alt="Open/Close">
-          </button>
-        </div>
-        <% faqs.forEach(function (qa, index) { %>
-          <div class="expandable <%=(index == 0) ? "" : "closed"%>">
-            <div>
-              <h3>
-                <%- qa.question %>
-              </h3>
-              <img class="open_close_icon" src="<%=(index == 0) ? `${GoogleIconsAWSurl}close_white.svg` : `${GoogleIconsAWSurl}open_white.svg`%>" data-image-open="<%=`${GoogleIconsAWSurl}close_white.svg`%>" data-image-close="<%=`${GoogleIconsAWSurl}open_white.svg`%>" alt="Open/Close">
-            </div>
             <p>
               <%- qa.answer %>
             </p>
           </div>
-        <% }) %>
-      </section>
+        </div>
+      <% }) %>
+    </section>
 </main>
 
 

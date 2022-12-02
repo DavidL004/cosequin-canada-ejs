@@ -1,0 +1,24 @@
+<picture>
+    <% for (let src of display.sources) { %>
+        <source 
+            srcset="<%=src.img%>" 
+            type="<%=src.type%>" 
+            media=<%_if (src.deviceType) { _%>
+                <%_ switch(src.deviceType) {
+                    case 'tablet': _%>
+                        "<%="(min-width:600px)"_%>"
+                        <%_ break;
+                    case 'desktop': %>
+                        "<%="(min-width:1200px)"_%>"
+                        <%_ break;
+                    case 'default': _%>
+                        "<%=""_%>"
+                        <%_ break;
+                } _%> 
+            <%_ } else { _%>
+                <%=""_%>
+            <%_ } _%> 
+        />
+    <% } %>
+    <img src="<%=`${ImageAWSurl}${display.defaultImage}`%>" alt="<%=display.altText%>">
+  </picture>

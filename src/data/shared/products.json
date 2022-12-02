@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "animalType": "dog",
+            "type": "Soft Chew",
+            "name": "<span class=\"regulatory\">Cosequin</span> Maximum Strength with MSM Plus Omega-3's",
+            "urls": {
+                "amazonURL": "testAmazonURL",
+                "costcoURL": "testCostcoURL",
+                "petSmartURL": "testPetSmartURL",
+                "productPageURL": "testLearnMoreURL",
+                "imgURL": "cosequin_dog_chews_display.webp"
+            }
+        },
+        {
+            "animalType": "dog",
+            "type": "Chewable Tablet",
+            "name": "<span class=\"regulatory\">Cosequin</span> Maximum Strength Plus MSM",
+            "urls": {
+                "amazonURL": "testAmazonURL",
+                "costcoURL": "testCostcoURL",
+                "petSmartURL": "testPetSmartURL",
+                "productPageURL": "testLearnMoreURL",
+                "imgURL": "cosequin_dog_chewable_display.webp"
+            }
+        },
+        {
+            "animalType": "cat",
+            "type": "Capsule",
+            "name": "<span class=\"regulatory\">Cosequin</span> For Cats Maximum Strength Capsules",
+            "urls": {
+                "amazonURL": "testAmazonURL",
+                "costcoURL": "testCostcoURL",
+                "petSmartURL": "testPetSmartURL",
+                "productPageURL": "testLearnMoreURL",
+                "imgURL": "cosequin_cat_extra_display.webp"
+            }
+        },
+        {
+            "animalType": "cat",
+            "type": "Capsule",
+            "name": "<span class=\"regulatory\">Cosequin</span> For Cats Capsules",
+            "urls": {
+                "amazonURL": "testAmazonURL",
+                "costcoURL": "testCostcoURL",
+                "petSmartURL": "testPetSmartURL",
+                "productPageURL": "testLearnMoreURL",
+                "imgURL": "cosequin_cat_capsules_display.webp"
+            }
+        }
+    ]
+}

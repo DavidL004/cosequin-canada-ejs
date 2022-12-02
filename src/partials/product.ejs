@@ -1,5 +1,5 @@
 <div class="product<%=(animalType==defaultAnimal) ? "" : " hidden"%>" data-animal="<%=animalType%>">
-    <img src="<%=`${urls.imgURL}`%>" alt="">
+    <img src="<%=`${ImageAWSurl}${urls.imgURL}`%>" alt="">
     <p><em><%= type %></em></p>
     <h4><%- name %></h4>
     <div class="expandable closed">

@@ -128,7 +128,7 @@
     <%- include('src/partials/horizontal-rule', {src: 'https://s3.amazonaws.com/static.cosequin.com/ca/nmx_icons/icon_usa_retail.svg'}); %>
 
     <section class="where-to-buy">
-        <img src="<%=`${ImageAWSurl}${landing.image}`%>" alt="">
+        <%- include('src/partials/picture_format.ejs', {display: landing.image}) %> 
         <h3>Where To Buy</h3>
         <%- include('src/partials/shop-buttons'); %> 
     </section>
